@@ -12,5 +12,8 @@
     "typescript"
   ],
   "author": "arthur ming",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
 }
