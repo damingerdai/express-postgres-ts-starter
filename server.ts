@@ -20,7 +20,6 @@ routes.forEach(route => {
 
 	switch (route.method) {
 		case 'GET':
-			console.log(route)
 			router.get(route.path, validateBody, validateParams, validateQuery, route.controller);
 			break;
 		case 'POST':
