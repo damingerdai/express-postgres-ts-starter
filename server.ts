@@ -1,12 +1,13 @@
 import express from 'express';
 
+import { middlewares } from './src/middlewares';
 import { router } from './src/routes';
-import { config } from 'src/config';
+import { config } from './src/config';
 
 const server = express();
 
 const serverConfig = config.server;
-
+middlewares.forEach(mid => server.use(mid));
 server.use('/', router);
 
 server.listen(serverConfig.port, () => {
