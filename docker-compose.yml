@@ -8,7 +8,7 @@ services:
     command: yarn run start:dev
     volumes:
       - .:/app
-    # env_file: .env
+    env_file: secrets/local.env
     ports:
       - 8080:3000
 
