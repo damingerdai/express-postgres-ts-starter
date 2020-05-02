@@ -11,3 +11,11 @@ services:
     # env_file: .env
     ports:
       - 8080:3000
+
+volumes:
+  daming-volume:
+    external: true
+
+networks:
+  daming-network:
+    external: true
