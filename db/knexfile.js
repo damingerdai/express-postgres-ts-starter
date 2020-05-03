@@ -4,8 +4,7 @@ module.exports = {
 	debug: process.env.DEBUG === 'true' || false,
 	pool: {
 		min: parseInt(process.env.POSTGRES_POOL_MIN, 10) || 2,
-		max: parseInt(process.env.POSTGRES_POOL_MAX, 10) || 10,
-		bailAfter: 3 * 1000
+		max: parseInt(process.env.POSTGRES_POOL_MAX, 10) || 10
 	},
 	connection: {
 		host: process.env.POSTGRES_HOST || 'db',
