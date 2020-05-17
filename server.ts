@@ -4,12 +4,12 @@ import { middlewares } from './src/middlewares';
 import { router } from './src/routes';
 import { config } from './src/config';
 
-const server = express();
+const app = express();
 
 const serverConfig = config.server;
-middlewares.forEach(mid => server.use(mid));
-server.use('/', router);
+middlewares.forEach(mid => app.use(mid));
+app.use('/', router);
 
-server.listen(serverConfig.port, () => {
+app.listen(serverConfig.port, () => {
 	console.log(`The server has started on port ${serverConfig.port}`);
 });
