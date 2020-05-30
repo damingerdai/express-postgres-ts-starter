@@ -2,7 +2,6 @@ import * as Knex from 'knex';
 import { PartialWithArray } from './util';
 
 export class Knexer<T> {
-
 	private db: Knex;
 	protected tableName: string;
 
@@ -12,9 +11,9 @@ export class Knexer<T> {
 	}
 
 	public async create(value: Partial<T> = {}) {
-		const records = this.raw().insert(value).returning('*');
+		const records = await this.raw().insert(value).returning('*');
 		if (records && records[0]) {
-			return records[0]
+			return records[0];
 		} else {
 			return null;
 		}
@@ -32,7 +31,10 @@ export class Knexer<T> {
 		return query;
 	}
 
-	protected manyQuery(selectors: PartialWithArray<T> = {}, knex: Knex = null): Knex.QueryBuilder {
+	protected manyQuery(
+		selectors: PartialWithArray<T> = {},
+		knex: Knex = null
+	): Knex.QueryBuilder {
 		if (!knex) knex = this.db;
 
 		let query = knex(this.tableName);
@@ -47,7 +49,6 @@ export class Knexer<T> {
 
 		return query;
 	}
-
 
 	protected raw(): Knex.QueryBuilder {
 		return this.db(this.tableName);
