@@ -14,7 +14,8 @@
     "migrate:down": "./node_modules/.bin/knex --knexfile db/knexfile.js migrate:rollback",
     "seed:make": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:make",
     "start:dev": "ts-node-dev --require tsconfig-paths/register server.ts",
-    "prettier": "prettier --check ."
+    "prettier": "prettier --check .",
+    "lint": "yarn prettier"
   },
   "keywords": [
     "express",
