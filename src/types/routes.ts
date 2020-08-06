@@ -8,7 +8,7 @@ export interface ISchema {
 }
 
 export interface IRoute {
-	method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH',
+	method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 	path: string;
 	schema?: ISchema;
 	controller: (res: Request, req: Response) => void;

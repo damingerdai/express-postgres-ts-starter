@@ -13,31 +13,64 @@ routes.forEach(route => {
 	const next = (req, res, nxt) => nxt();
 
 	const validateBody = schema?.body ? JoiValidator().body(schema.body) : next;
-	const validateParams = schema?.params ? JoiValidator().params(schema.params) : next;
-	const validateQuery = schema?.query ? JoiValidator().query(schema.query) : next;
+	const validateParams = schema?.params
+		? JoiValidator().params(schema.params)
+		: next;
+	const validateQuery = schema?.query
+		? JoiValidator().query(schema.query)
+		: next;
 
 	switch (route.method) {
 		case 'GET':
-			expressRouter.get(route.path, validateBody, validateParams, validateQuery, route.controller);
+			expressRouter.get(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
 			break;
 		case 'POST':
-			expressRouter.post(route.path, validateBody, validateParams, validateQuery, route.controller);
+			expressRouter.post(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
 			break;
 		case 'PUT':
-			expressRouter.put(route.path, validateBody, validateParams, validateQuery, route.controller);
+			expressRouter.put(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
 			break;
 		case 'PATCH':
-			expressRouter.patch(route.path, validateBody, validateParams, validateQuery, route.controller);
+			expressRouter.patch(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
 			break;
 		case 'DELETE':
-			expressRouter.delete(route.path, validateBody, validateParams, validateQuery, route.controller);
+			expressRouter.delete(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
 			break;
 		default:
-			throw new Error(`Failed to load route. Invalid method: ${route.method} for path ${route.path}`);
+			throw new Error(
+				`Failed to load route. Invalid method: ${route.method} for path ${route.path}`
+			);
 	}
-})
+});
 
 export const router = expressRouter;
-
-
-

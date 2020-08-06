@@ -20,13 +20,8 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.ts', '.js'],
-		modules: [
-			'node_modules',
-			'src'
-		],
-		plugins: [
-			new TsConfigPathsPlugin()
-		]
+		modules: ['node_modules', 'src'],
+		plugins: [new TsConfigPathsPlugin()]
 	},
 	plugins: [
 		new webpack.LoaderOptionsPlugin({
@@ -45,10 +40,12 @@ module.exports = {
 	],
 	devtool: 'source-map',
 	module: {
-		rules: [{
-			test: /\.ts$/,
-			loaders: 'awesome-typescript-loader'
-		}]
+		rules: [
+			{
+				test: /\.ts$/,
+				loaders: 'awesome-typescript-loader'
+			}
+		]
 	},
 	externals: [nodeExternals()]
 };

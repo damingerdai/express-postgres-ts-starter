@@ -20,9 +20,9 @@ services:
       - daming-volume:/var/lib/postgresql/data
       # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
-        POSTGRES_USER: postgres
-        POSTGRES_DB: postgres
-        POSTGRES_PASSWORD: 12345
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: 12345
     networks:
       - daming-network
 
