@@ -5,7 +5,7 @@ name: Express Postgres Ts Starter Lint Workflow
 
 on:
   push:
-    branches: [master]
+    branches: [master, develop]
   pull_request:
     branches: [master, develop]
 
