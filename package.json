@@ -15,6 +15,7 @@
     "seed:make": "./node_modules/.bin/knex --knexfile db/knexfile.js seed:make",
     "start:dev": "ts-node-dev --require tsconfig-paths/register server.ts",
     "prettier": "prettier --check .",
+    "eslint:ts": "eslint src/**/*.ts",
     "lint": "yarn prettier"
   },
   "keywords": [
@@ -42,6 +43,8 @@
     "@types/helmet": "^0.0.47",
     "@types/jest": "^26.0.3",
     "@types/joi": "^14.3.4",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
     "awesome-typescript-loader": "^5.2.1",
     "conventional-changelog-cli": "^2.0.31",
     "eslint": "^7.6.0",

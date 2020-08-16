@@ -7,9 +7,8 @@ const transform = (data, func) => {
 		return data.map(elem => transform(elem, func));
 	} else if (typeof data === 'object') {
 		return _.mapKeys(data, (value, key) => transform(key, func));
-	} else {
-		return func(data);
 	}
+	return func(data);
 };
 
 export const camelCase = data => {
