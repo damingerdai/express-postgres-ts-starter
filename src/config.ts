@@ -30,11 +30,9 @@ export const config = {
 			min: parseInt(process.env.POSTGRES_POOL_MIN, 10) || 2
 		},
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-module-boundary-types,  no-unused-vars
-		postProcessResponse: (result, queryContext) =>
-			convertToCase(result, camelCase),
+		postProcessResponse: (result, queryContext) => convertToCase(result, camelCase),
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-module-boundary-types,  no-unused-vars
-		wrapIdentifier: (value, origImpl, queryContext) =>
-			origImpl(convertToCase(value, snakeCase))
+		wrapIdentifier: (value, origImpl, queryContext) => origImpl(convertToCase(value, snakeCase))
 	},
 	server: {
 		port: process.env.APP_PORT || 3000,
