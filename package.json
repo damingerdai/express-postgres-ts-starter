@@ -16,7 +16,7 @@
     "start:dev": "ts-node-dev --require tsconfig-paths/register server.ts",
     "prettier": "prettier --check .",
     "eslint:ts": "eslint src/**/*.ts",
-    "lint": "yarn prettier"
+    "lint": "yarn prettier && yarn eslint:ts"
   },
   "keywords": [
     "express",
