@@ -10,22 +10,21 @@ export class Knexer<T> {
 		this.tableName = tableName;
 	}
 
-	public async create(value: Partial<T> = {}) {
+	public async create(value: Partial<T> = {}): Promise<T> {
 		const records = await this.raw().insert(value).returning('*');
 		if (records && records[0]) {
 			return records[0];
-		} else {
-			return null;
 		}
+		return null;
 	}
 
-	public async findOne(selectors: PartialWithArray<T> = {}): Promise<T> {
+	public findOne(selectors: PartialWithArray<T> = {}): Promise<T> {
 		const query = this.manyQuery(selectors).first();
 
 		return query;
 	}
 
-	public async findMany(selectors: PartialWithArray<T> = {}): Promise<T[]> {
+	public findMany(selectors: PartialWithArray<T> = {}): Promise<T[]> {
 		const query = this.manyQuery(selectors);
 
 		return query;
@@ -35,7 +34,9 @@ export class Knexer<T> {
 		selectors: PartialWithArray<T> = {},
 		knex: Knex = null
 	): Knex.QueryBuilder {
-		if (!knex) knex = this.db;
+		if (!knex) {
+			knex = this.db;
+		}
 
 		let query = knex(this.tableName);
 
