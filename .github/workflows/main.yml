@@ -13,7 +13,7 @@ jobs:
  # job's id
  release:
   # job's name
-  name: build and release electron app
+  name: build express postgres ts starter
 
   # the type of machine to run the job on
   runs-on: ${{ matrix.os }}
@@ -21,7 +21,7 @@ jobs:
   # create a build matrix for jobs
   strategy:
    matrix:
-    os: [windows-2019, macos-10.15]
+    os: [windows-last, macos-last, ubuntu-latest]
 
   # create steps
   steps:
