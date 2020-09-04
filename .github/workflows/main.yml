@@ -1,7 +1,7 @@
 # main.yml
 
 # Workflow's name
-name: Build Express App For Win/Mac
+name: Build Express App
 
 # Workflow's trigger
 on:
@@ -25,29 +25,29 @@ jobs:
 
   # create steps
   steps:
-   # step1: check out repository
    - name: Check out git repository
      uses: actions/checkout@v2
 
-   # step2: install node env
    - name: Install Node.js
-     uses: actions/setup-node@v2-beta
+     uses: actions/setup-node@v2
 
-   # step3: npm install
-   - name: npm install
+   - name: Install yarn
      run: |
-      npm install
+      npm install -g yarn
 
-   # step4: build app for mac/win
-   - name: build windows app
+   - name: Install 3rd library
+     run: |
+      yarn
+
+   - name: build express app
      if: matrix.os == 'windows-2019'
      run: |
-      npm run build
+      yarn build
 
-   - name: build mac app
+   - name: build express app
      if: matrix.os == 'macos-10.15'
      run: |
-      npm run build
+      yarn build
 
    # step5: cleanup artifacts in dist_electron
    - name: cleanup artifacts
