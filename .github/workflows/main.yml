@@ -5,7 +5,8 @@ name: Build Express App For Win/Mac
 
 # Workflow's trigger
 on:
- branches: [master, develop, workflows-fix]
+ push:
+  branches: [master, develop, workflows-fix]
 
 # Workflow's jobs
 jobs:
