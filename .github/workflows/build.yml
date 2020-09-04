@@ -28,6 +28,12 @@ jobs:
      with:
       node-version: ${{ matrix.node-version }}
 
+   - name: Install yarn
+     run: npm install -g yarn
+
+   - name: Install 3rd library
+     run: yarn
+
    - name: build starter
      run: npm install -g yarn && yarn && yarn build
 
