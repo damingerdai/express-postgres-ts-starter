@@ -28,8 +28,8 @@ jobs:
      with:
       node-version: ${{ matrix.node-version }}
 
-   - name: build starter
-     run: npm install -g yarn && yarn && yarn build
+  #  - name: build starter
+  #    run: npm install -g yarn && yarn && yarn build
 
-   - name: cleanup artifacts
-     run: npx rimraf "dist"
+  #  - name: cleanup artifacts
+  #    run: npx rimraf "dist"
