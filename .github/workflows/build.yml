@@ -16,17 +16,15 @@ jobs:
 
   strategy:
    matrix:
-    # node-version: [12.x, 14.x]
-    # os: [windows-last, macos-last, ubuntu-latest]
     node-version: [12.x, 14.x]
-    os: [windows-last, macos-last, ubuntu-latest]
+    os: [windows-latest, macos-latest, ubuntu-latest]
 
   steps:
    - name: Check out git repository
      uses: actions/checkout@v2
 
    - name: Use Node.js ${{ matrix.node-version }}
-     uses: actions/setup-node@v2
+     uses: actions/setup-node@v2-beta
      with:
       node-version: ${{ matrix.node-version }}
 
@@ -36,8 +34,7 @@ jobs:
    - name: Install 3rd library
      run: yarn
 
-   - name: build starter for node12
-     if: matrix.node-version == '12.x'
+   - name: build starter
      run: yarn build
 
    - name: cleanup artifacts
