@@ -1,0 +1,54 @@
+# main.yml
+
+# Workflow's name
+name: Build Express App For Win/Mac
+
+# Workflow's trigger
+on:
+ branches: [master, develop, workflows-fix]
+
+# Workflow's jobs
+jobs:
+ # job's id
+ release:
+  # job's name
+  name: build and release electron app
+
+  # the type of machine to run the job on
+  runs-on: ${{ matrix.os }}
+
+  # create a build matrix for jobs
+  strategy:
+   matrix:
+    os: [windows-2019, macos-10.15]
+
+  # create steps
+  steps:
+   # step1: check out repository
+   - name: Check out git repository
+     uses: actions/checkout@v2
+
+   # step2: install node env
+   - name: Install Node.js
+     uses: actions/setup-node@v2-beta
+
+   # step3: npm install
+   - name: npm install
+     run: |
+      npm install
+
+   # step4: build app for mac/win
+   - name: build windows app
+     if: matrix.os == 'windows-2019'
+     run: |
+      npm run build
+
+   - name: build mac app
+     if: matrix.os == 'macos-10.15'
+     run: |
+      npm run build
+
+   # step5: cleanup artifacts in dist_electron
+   - name: cleanup artifacts
+     run: |
+      npx rimraf "dist"
