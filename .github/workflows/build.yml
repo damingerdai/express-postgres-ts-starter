@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Express Postgres Ts Starter Lint Workflow
+name: Express Postgres Ts Starter Build Workflow
 
 on:
  push:
@@ -10,20 +10,32 @@ on:
   branches: [master, develop]
 
 jobs:
- lint:
-  lint: audit express postgres ts starter
-  runs-on: ubuntu-latest
+ build:
+  name: build express postgres ts starter
+  runs-on: ${{ matrix.os }}
 
   strategy:
    matrix:
     node-version: [12.x, 14.x]
+    os: [windows-latest, macos-latest, ubuntu-latest]
 
   steps:
-   - uses: actions/checkout@v2
+   - name: Check out git repository
+     uses: actions/checkout@v2
+
    - name: Use Node.js ${{ matrix.node-version }}
-     uses: actions/setup-node@v1
+     uses: actions/setup-node@v2-beta
      with:
       node-version: ${{ matrix.node-version }}
-   - run: npm install -g yarn
-   - run: yarn
-   - run: yarn lint
+
+   - name: Install yarn
+     run: npm install -g yarn
+
+   - name: Install 3rd library
+     run: yarn
+
+   - name: build starter
+     run: yarn build
+
+   - name: cleanup artifacts
+     run: npx rimraf "dist"
