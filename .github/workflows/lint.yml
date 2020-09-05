@@ -11,6 +11,7 @@ on:
 
 jobs:
  lint:
+  lint: audit express postgres ts starter
   runs-on: ubuntu-latest
 
   strategy:
