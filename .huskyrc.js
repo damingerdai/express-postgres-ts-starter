@@ -201,23 +201,13 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-import * as _ from 'lodash';
+'use strict';
 
-const transform = (data, func) => {
-	if (!data) {
-		return data;
-	} else if (Array.isArray(data)) {
-		return data.map(elem => transform(elem, func));
-	} else if (typeof data === 'object') {
-		return _.mapKeys(data, (value, key) => transform(key, func));
+module.exports = {
+	hooks: {
+		'pre-push': 'yarn audit',
+		'pre-commit': 'lint-staged',
+		'commit-msg':
+			'commitlint -e $HUSKY_GIT_PARAMS --config ./tools/commitlint-config.js'
 	}
-	return func(data);
-};
-
-export const camelCase = data => {
-	return transform(data, _.camelCase);
-};
-
-export const snakeCase = data => {
-	return transform(data, _.snakeCase);
 };
