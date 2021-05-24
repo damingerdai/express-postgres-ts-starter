@@ -38,6 +38,7 @@
   "express": "^4.17.1",
   "express-joi-validation": "^0.2.1",
   "express-promise-router": "^3.0.3",
+  "graphql": "^15.5.0",
   "graphql-tag": "^2.11.0",
   "helmet": "^4.4.1",
   "joi": "^14.3.1",
@@ -59,7 +60,7 @@
   "cross-env": "^7.0.3",
   "eslint": "^7.19.0",
   "eslint-config-prettier": "^6.11.0",
-  "husky": "^4.3.6",
+  "husky": "^6.0.0",
   "jest": "^26.1.0",
   "lint-staged": "^10.2.2",
   "prettier": "^2.2.1",
@@ -76,7 +77,6 @@
  "resolutions": {
   "**/**/dot-prop": ">=5.1.1",
   "**/**/yargs-parser": ">=13.1.2 <14.0.0 || >=15.0.1 <16.0.0 || >=18.1.2",
-  "**/**/lodash": ">=4.17.19",
   "**/**/serialize-javascript": ">=3.1.0"
  }
 }
