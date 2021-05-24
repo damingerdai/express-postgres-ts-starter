@@ -22,7 +22,8 @@
   "lint": "yarn eslint:ts",
   "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
   "version:patch": "yarn version --patch",
-  "version:minor": "yarn version --minor"
+  "version:minor": "yarn version --minor",
+  "prepare": "husky install"
  },
  "keywords": [
   "express",
@@ -60,7 +61,7 @@
   "cross-env": "^7.0.3",
   "eslint": "^7.19.0",
   "eslint-config-prettier": "^6.11.0",
-  "husky": "^4.3.6",
+  "husky": "^6.0.0",
   "jest": "^26.1.0",
   "lint-staged": "^10.2.2",
   "prettier": "^2.2.1",
