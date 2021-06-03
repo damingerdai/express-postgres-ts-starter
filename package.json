@@ -6,6 +6,7 @@
  "scripts": {
   "build": "webpack",
   "build:watch": "webpack --watch",
+  "esbuild": "./node_modules/.bin/esbuild server.ts --bundle --outfile=dist/esbuild/server.js --platform=node --target=node14.15.3",
   "test": "jest",
   "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
   "changelog:all": "npx conventional-changelog -p angular -i CHANGELOG.md -w -s 0",
@@ -59,6 +60,7 @@
   "awesome-typescript-loader": "^5.2.1",
   "conventional-changelog-cli": "^2.0.31",
   "cross-env": "^7.0.3",
+  "esbuild": "^0.12.5",
   "eslint": "^7.19.0",
   "eslint-config-prettier": "^6.11.0",
   "husky": "^6.0.0",
