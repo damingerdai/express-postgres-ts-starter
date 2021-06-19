@@ -1,4 +1,4 @@
-import * as Knex from 'knex';
+import { Knex } from 'knex';
 import { PartialWithArray } from './util';
 
 export class Knexer<T> {
