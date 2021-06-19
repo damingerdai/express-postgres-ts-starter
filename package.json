@@ -78,7 +78,6 @@
   "webpack-node-externals": "^2.5.2"
  },
  "resolutions": {
-  "**/**/dot-prop": ">=5.1.1",
   "**/**/yargs-parser": ">=13.1.2 <14.0.0 || >=15.0.1 <16.0.0 || >=18.1.2",
   "**/**/serialize-javascript": ">=3.1.0"
  }
