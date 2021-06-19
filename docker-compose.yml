@@ -1,35 +1,35 @@
 version: '3'
 services:
-  backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    working_dir: /app
-    command: yarn run start:dev
-    volumes:
-      - .:/app
-    env_file: secrets/local.env
-    ports:
-      - 8080:3000
+ backend:
+  build:
+   context: .
+   dockerfile: Dockerfile
+  working_dir: /app
+  command: yarn run start:dev
+  volumes:
+   - .:/app
+  env_file: secrets/local.env
+  ports:
+   - 8080:3000
 
-  db:
-    image: postgres:12.2
-    ports:
-      - 5432:5432
-    volumes:
-      - daming-volume:/var/lib/postgresql/data
-      # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
-      POSTGRES_PASSWORD: 12345
-    networks:
-      - daming-network
+ db:
+  image: postgres:13.3
+  ports:
+   - 5432:5432
+  volumes:
+   - daming-volume:/var/lib/postgresql/data
+   # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  environment:
+   POSTGRES_USER: postgres
+   POSTGRES_DB: postgres
+   POSTGRES_PASSWORD: 12345
+  networks:
+   - daming-network
 
 volumes:
-  daming-volume:
-    external: true
+ daming-volume:
+  external: true
 
 networks:
-  daming-network:
-    external: true
+ daming-network:
+  external: true
