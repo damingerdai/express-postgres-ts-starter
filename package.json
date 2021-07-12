@@ -60,7 +60,7 @@
   "awesome-typescript-loader": "^5.2.1",
   "conventional-changelog-cli": "^2.0.31",
   "cross-env": "^7.0.3",
-  "esbuild": "^0.12.5",
+  "esbuild": "^0.12.15",
   "eslint": "^7.19.0",
   "eslint-config-prettier": "^6.11.0",
   "husky": "^6.0.0",
