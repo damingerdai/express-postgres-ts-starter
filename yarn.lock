@@ -857,7 +857,7 @@
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
   integrity sha512-OCutwjDZ4aFS6PB1UZ988C4YgwlBHJd6wCeQqaLdmadZ/7e+w79+hbMUFC1QXDNCmdyoRfAFdm0RypzwR+Qpag==
 
-"@types/express-serve-static-core@*", "@types/express-serve-static-core@4.17.19", "@types/express-serve-static-core@^4.17.18":
+"@types/express-serve-static-core@4.17.19", "@types/express-serve-static-core@^4.17.18":
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.19.tgz#00acfc1632e729acac4f1530e9e16f6dd1508a1d"
   integrity sha512-DJOSHzX7pCiSElWaGR8kCprwibCB/3yW6vcT8VG3P0SJjnv19gnWG/AZMfM60Xj/YJIp/YCaDHyvzsFVeniARA==
@@ -874,15 +874,6 @@
     "@types/body-parser" "*"
     "@types/express-serve-static-core" "^4.17.18"
     "@types/qs" "*"
-    "@types/serve-static" "*"
-
-"@types/express@~4.0.39":
-  version "4.0.39"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.39.tgz#1441f21d52b33be8d4fa8a865c15a6a91cd0fa09"
-  integrity sha512-dBUam7jEjyuEofigUXCtublUHknRZvcRgITlGsTbFgPvnTwtQUt2NgLakbsf+PsGo/Nupqr3IXCYsOpBpofyrA==
-  dependencies:
-    "@types/body-parser" "*"
-    "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
 "@types/fs-capacitor@*":
@@ -3389,12 +3380,10 @@ expect@^27.0.2:
     jest-message-util "^27.0.2"
     jest-regex-util "^27.0.1"
 
-express-joi-validation@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/express-joi-validation/-/express-joi-validation-0.2.1.tgz#63a014a54836c1a08c13f429dc1be3ccad2c3711"
-  integrity sha1-Y6AUpUg2waCME/Qp3BvjzK0sNxE=
-  dependencies:
-    "@types/express" "~4.0.39"
+express-joi-validation@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/express-joi-validation/-/express-joi-validation-0.3.0.tgz#6f7a8ca1cacd1175fbf08e3ba6a0a6b56c5e3482"
+  integrity sha512-lH8zcpX/BxHICHyJJyOhpvK3i9rkBr0b/D2i6sKeWxxQEUDt8nKS6nwKJcJA/Arcsbu1UzE0hJ8sa5XJtzWR6w==
 
 express-promise-router@^3.0.3:
   version "3.0.3"
