@@ -28,6 +28,13 @@ use yarn install 3rd dependencies
 yarn
 ```
 
+run db migrations and seed script
+
+```
+yarn migrate:up:local
+yarn seed:run:local
+```
+
 run server in develop mode
 
 ```
