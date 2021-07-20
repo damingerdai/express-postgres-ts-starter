@@ -5,6 +5,7 @@
   "coverage",
   "cypress",
   ".idea",
+  ".husky",
   ".yarn",
   "**/*.json",
   "**/*.svg",
