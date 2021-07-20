@@ -1,0 +1,36 @@
+{
+ "ignore": [
+  ".git",
+  ".github/ISSUE_TEMPLATE",
+  "coverage",
+  "cypress",
+  ".idea",
+  ".yarn",
+  "**/*.json",
+  "**/*.svg",
+  "**/*.png",
+  "**/*.txt",
+  "**/*.md",
+  "**/.prettierrc",
+  "**/.prettierignore",
+  "**/OWNERS",
+  "**/*.lock"
+ ],
+ "license": "license-header.txt",
+ "defaultFormat": {
+  "eachLine": {
+   "prepend": "# "
+  },
+  "append": ""
+ },
+ "licenseFormats": {
+  "ts|js": {
+   "eachLine": {
+    "prepend": " *"
+   },
+   "prepend": "/*",
+   "append": "*/"
+  }
+ },
+ "trailingWhitespace": "TRIM"
+}
