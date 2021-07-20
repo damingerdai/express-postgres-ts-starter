@@ -26,10 +26,10 @@
  "licenseFormats": {
   "ts|js": {
    "eachLine": {
-    "prepend": " *"
+    "prepend": " * "
    },
    "prepend": "/*",
-   "append": "*/"
+   "append": " */"
   }
  },
  "trailingWhitespace": "TRIM"
