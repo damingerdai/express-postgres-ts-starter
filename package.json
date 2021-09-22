@@ -47,7 +47,7 @@
   "express-joi-validation": "^0.2.1",
   "express-promise-router": "^3.0.3",
   "graphql": "^15.5.1",
-  "graphql-tag": "^2.11.0",
+  "graphql-tag": "^2.12.5",
   "helmet": "^4.4.1",
   "joi": "^14.3.1",
   "knex": "^0.95.6",
