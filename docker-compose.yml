@@ -17,11 +17,12 @@ services:
  backend:
   build:
    context: .
-   dockerfile: Dockerfile
+   dockerfile: local.Dockerfile
   working_dir: /app
   command: yarn run start:dev
   volumes:
    - .:/app
+   - /app/node_modules/
   env_file: secrets/local.env
   ports:
    - 8080:3000
