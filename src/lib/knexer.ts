@@ -13,8 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Knex } from 'knex';
+import { Knex, knex } from 'knex';
 import { PartialWithArray } from './util';
+
+const config: Knex.Config = {
+	client: 'sqlite3',
+	connection: {
+		filename: './data.db'
+	}
+};
+
+const knexInstance = knex(config);
+
+export const t = knexInstance('user');
 
 export class Knexer<T> {
 	private db: Knex;
@@ -66,7 +77,7 @@ export class Knexer<T> {
 		return query;
 	}
 
-	protected raw(): Knex.QueryBuilder {
+	protected raw(): Knex.QueryBuilder<any, any> {
 		return this.db(this.tableName);
 	}
 }
