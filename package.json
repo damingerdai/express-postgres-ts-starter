@@ -72,7 +72,7 @@
   "husky": "^7.0.1",
   "jest": "^27.0.3",
   "license-check-and-add": "^4.0.2",
-  "lint-staged": "^11.0.0",
+  "lint-staged": "^12.1.1",
   "prettier": "^2.3.2",
   "ts-jest": "^27.0.2",
   "ts-loader": "^9.2.6",
