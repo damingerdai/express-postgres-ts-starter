@@ -69,7 +69,7 @@
   "cross-env": "^7.0.3",
   "esbuild": "^0.14.3",
   "eslint": "^7.19.0",
-  "eslint-config-prettier": "^6.11.0",
+  "eslint-config-prettier": "^8.4.0",
   "husky": "^7.0.1",
   "jest": "^27.0.3",
   "license-check-and-add": "^4.0.2",
