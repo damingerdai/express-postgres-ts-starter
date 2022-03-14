@@ -79,7 +79,7 @@
   "ts-loader": "^9.2.6",
   "ts-node": "^9.0.0",
   "ts-node-dev": "^1.1.6",
-  "tsconfig-paths": "^3.9.0",
+  "tsconfig-paths": "^3.14.0",
   "tsconfig-paths-webpack-plugin": "^3.2.0",
   "typescript": "4.4.4",
   "webpack": "^5.67.0",
