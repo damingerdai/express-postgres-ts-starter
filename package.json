@@ -47,7 +47,7 @@
   "cookie-parser": "^1.4.5",
   "express": "^4.17.1",
   "express-joi-validation": "^0.2.1",
-  "express-promise-router": "^3.0.3",
+  "express-promise-router": "^4.1.1",
   "graphql": "^15.5.1",
   "graphql-tag": "^2.11.0",
   "helmet": "^5.1.0",
