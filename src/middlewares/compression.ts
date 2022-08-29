@@ -13,18 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import cookieParser from 'cookie-parser';
-import * as helmet from 'helmet';
+import compression from 'compression';
 
-import { BodyParserMiddleware } from './body-parser';
-import { Compression } from './compression';
-
-export const middlewares = [
-	BodyParserMiddleware,
-	cookieParser(),
-	Compression,
-	helmet.noSniff(),
-	helmet.hsts({
-		maxAge: 518400
-	})
-];
+export const Compression = compression();
