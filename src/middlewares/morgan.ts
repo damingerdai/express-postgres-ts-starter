@@ -13,20 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import cookieParser from 'cookie-parser';
-import * as helmet from 'helmet';
+import morgan from 'morgan';
+import { config } from 'src/config';
 
-import { BodyParserMiddleware } from './body-parser';
-import { Compression } from './compression';
-import { Morgan } from './morgan';
-
-export const middlewares = [
-	BodyParserMiddleware,
-	cookieParser(),
-	Compression,
-	helmet.noSniff(),
-	helmet.hsts({
-		maxAge: 518400
-	}),
-	Morgan
-];
+export const Morgan = morgan('dev', {
+	skip: () => config.server.isProduction
+});

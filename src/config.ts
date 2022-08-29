@@ -57,6 +57,7 @@ export const config = {
 			caseSensitive: false,
 			mergeParams: false,
 			strict: false
-		}
+		},
+		isProduction: process.env.NODE_ENV?.toLowerCase() === 'production'
 	}
 };
