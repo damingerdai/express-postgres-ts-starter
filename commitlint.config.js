@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-"module.exports = {extends: ['@commitlint/config-conventional']}";
 
 module.exports = {
 	extends: ['@commitlint/config-conventional'],
@@ -37,7 +36,7 @@ module.exports = {
 		],
 		'subject-full-stop': [0, 'never'],
 		'subject-case': [0, 'never'],
-		'header-max-length': [2, 'always', '120'],
+		'header-max-length': [2, 'always', '200'],
 		'scope-case': [0, 'never']
 	}
 };
