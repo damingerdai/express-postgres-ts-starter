@@ -78,7 +78,7 @@ module.exports = {
 		'require-await': 'error',
 		'no-undef': 'error',
 		'no-undef-init': 'error',
-		'no-unused-vars': 'error',
+		// 'no-unused-vars': 'error',
 		'no-use-before-define': 'error',
 
 		// Nodejs
@@ -193,6 +193,7 @@ module.exports = {
 		'no-var': 'error',
 
 		// Typescript eslint
-		'@typescript-eslint/explicit-function-return-type': 'off'
+		'@typescript-eslint/explicit-function-return-type': 'off',
+		'@typescript-eslint/no-unused-vars': 'off'
 	}
 };
