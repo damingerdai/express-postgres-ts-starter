@@ -71,7 +71,7 @@
   "esbuild": "^0.14.3",
   "eslint": "^7.19.0",
   "eslint-config-prettier": "^6.11.0",
-  "husky": "^7.0.1",
+  "husky": "^8.0.1",
   "jest": "^27.0.3",
   "license-check-and-add": "^4.0.5",
   "lint-staged": "^12.1.1",
