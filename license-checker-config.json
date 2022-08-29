@@ -1,5 +1,6 @@
 {
  "ignore": [
+  ".env",
   ".git",
   ".github/ISSUE_TEMPLATE",
   "coverage",
@@ -9,6 +10,7 @@
   ".yarn",
   ".nvmrc",
   ".yarnrc",
+  "yarn-error.log",
   "**/*.json",
   "**/*.svg",
   "**/*.png",
