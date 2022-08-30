@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import cookieParser from 'cookie-parser';
+import express from 'express';
 import * as helmet from 'helmet';
 
 import { BodyParserMiddleware } from './body-parser';
@@ -28,5 +29,7 @@ export const middlewares = [
 	helmet.hsts({
 		maxAge: 518400
 	}),
-	Morgan
+	Morgan,
+	express.json({ limit: '50mb' }),
+	express.urlencoded({ extended: true, limit: '50mb' })
 ];
