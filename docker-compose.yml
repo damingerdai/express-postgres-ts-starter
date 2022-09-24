@@ -40,9 +40,29 @@ services:
    POSTGRES_PASSWORD: 12345
   networks:
    - daming-network
+ minio:
+  image: minio/minio
+  ports:
+   - '9000:9000'
+   - '9001:9001'
+  volumes:
+   - daming-minio-volume:/data/minio
+   # - daming-minio-volume::/root/.minio
+  environment:
+   - MINIO_ROOT_USER=minioadmin
+   - MINIO_ROOT_PASSWORD=minioadmin
+  command: server /data/minio --console-address ":9001"
+  healthcheck:
+   test: ['CMD', 'curl', '-f', 'http://localhost:9000/minio/health/live']
+   interval: 30s
+   timeout: 20s
+   retries: 3
+  restart: on-failure
 
 volumes:
  daming-volume:
+  external: true
+ daming-minio-volume:
   external: true
 
 networks:

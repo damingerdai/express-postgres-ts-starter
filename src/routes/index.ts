@@ -16,12 +16,13 @@
 import JoiValidator from 'express-joi-validation';
 import ExpressRouter from 'express-promise-router';
 
+import { File } from './file';
 import { Ping } from './ping';
 import { config } from 'src/config';
 
 const expressRouter = ExpressRouter(config?.server?.router);
 
-export const routes = [Ping];
+export const routes = [Ping, File];
 
 routes.forEach(route => {
 	const schema = route?.schema;
@@ -36,55 +37,55 @@ routes.forEach(route => {
 		: next;
 
 	switch (route.method) {
-	case 'GET':
-		expressRouter.get(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'POST':
-		expressRouter.post(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'PUT':
-		expressRouter.put(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'PATCH':
-		expressRouter.patch(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'DELETE':
-		expressRouter.delete(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	default:
-		throw new Error(
-			`Failed to load route. Invalid method: ${route.method} for path ${route.path}`
-		);
+		case 'GET':
+			expressRouter.get(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
+			break;
+		case 'POST':
+			expressRouter.post(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
+			break;
+		case 'PUT':
+			expressRouter.put(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
+			break;
+		case 'PATCH':
+			expressRouter.patch(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
+			break;
+		case 'DELETE':
+			expressRouter.delete(
+				route.path,
+				validateBody,
+				validateParams,
+				validateQuery,
+				route.controller
+			);
+			break;
+		default:
+			throw new Error(
+				`Failed to load route. Invalid method: ${route.method} for path ${route.path}`
+			);
 	}
 });
 
