@@ -59,5 +59,13 @@ export const config = {
 			strict: false
 		},
 		isProduction: process.env.NODE_ENV?.toLowerCase() === 'production'
+	},
+	minio: {
+		endPoint: '127.0.0.1',
+		port: 9000,
+		useSSL: false,
+		accessKey: 'minioadmin',
+		secretKey: 'minioadmin',
+		bucket: 'daming'
 	}
 };

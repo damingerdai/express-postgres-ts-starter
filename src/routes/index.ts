@@ -16,12 +16,13 @@
 import JoiValidator from 'express-joi-validation';
 import ExpressRouter from 'express-promise-router';
 
+import { File } from './file';
 import { Ping } from './ping';
 import { config } from 'src/config';
 
 const expressRouter = ExpressRouter(config?.server?.router);
 
-export const routes = [Ping];
+export const routes = [Ping, File];
 
 routes.forEach(route => {
 	const schema = route?.schema;

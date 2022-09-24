@@ -13,25 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import cookieParser from 'cookie-parser';
-import express from 'express';
-import fileUpload from 'express-fileupload';
-import * as helmet from 'helmet';
+import * as Minio from 'minio';
+import { config } from 'src/config';
 
-import { BodyParserMiddleware } from './body-parser';
-import { Compression } from './compression';
-import { Morgan } from './morgan';
+const { minio: minioConfig } = config;
 
-export const middlewares = [
-	BodyParserMiddleware,
-	cookieParser(),
-	Compression,
-	helmet.noSniff(),
-	helmet.hsts({
-		maxAge: 518400
-	}),
-	Morgan,
-	fileUpload(),
-	express.json({ limit: '50mb' }),
-	express.urlencoded({ extended: true, limit: '50mb' })
-];
+export const minioClient = new Minio.Client({
+	endPoint: minioConfig.endPoint,
+	port: minioConfig.port,
+	useSSL: minioConfig.useSSL,
+	accessKey: minioConfig.accessKey,
+	secretKey: minioConfig.secretKey
+});

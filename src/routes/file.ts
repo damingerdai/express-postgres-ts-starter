@@ -13,25 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import cookieParser from 'cookie-parser';
-import express from 'express';
-import fileUpload from 'express-fileupload';
-import * as helmet from 'helmet';
+import { FileService } from 'src/service/file';
+import { IRoute } from 'src/types/routes';
 
-import { BodyParserMiddleware } from './body-parser';
-import { Compression } from './compression';
-import { Morgan } from './morgan';
-
-export const middlewares = [
-	BodyParserMiddleware,
-	cookieParser(),
-	Compression,
-	helmet.noSniff(),
-	helmet.hsts({
-		maxAge: 518400
-	}),
-	Morgan,
-	fileUpload(),
-	express.json({ limit: '50mb' }),
-	express.urlencoded({ extended: true, limit: '50mb' })
-];
+export const File: IRoute = {
+	method: 'POST',
+	path: '/uploadImage',
+	controller: (req, res) => {
+		FileService.uploadImage(req, res);
+	}
+};
