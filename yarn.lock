@@ -1100,7 +1100,7 @@
 
 "@types/busboy@*":
   version "1.5.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/@types/busboy/-/busboy-1.5.0.tgz#62681556cbbd2afc8d2efa6bafaa15602f0838b9"
+  resolved "https://registry.yarnpkg.com/@types/busboy/-/busboy-1.5.0.tgz#62681556cbbd2afc8d2efa6bafaa15602f0838b9"
   integrity sha512-ncOOhwmyFDW76c/Tuvv9MA9VGYUCn8blzyWmzYELcNGDb0WXWLSmFi7hJq25YdRBYJrmMBB5jZZwUjlJe9HCjQ==
   dependencies:
     "@types/node" "*"
@@ -1145,7 +1145,7 @@
 
 "@types/express-fileupload@^1.4.1":
   version "1.4.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/@types/express-fileupload/-/express-fileupload-1.4.1.tgz#3388b14dedfa877be43bbe0540dcd5e13e963bca"
+  resolved "https://registry.yarnpkg.com/@types/express-fileupload/-/express-fileupload-1.4.1.tgz#3388b14dedfa877be43bbe0540dcd5e13e963bca"
   integrity sha512-sbl865h1Sser6SF+efpw2F/+roGISj+PRIbMcGXbtzgJQCBAeeBmoSo7sPge/mBa22ymCHfFPtHFsag/wUxwfg==
   dependencies:
     "@types/busboy" "*"
@@ -1253,7 +1253,7 @@
 
 "@types/minio@^7.0.13":
   version "7.0.13"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/@types/minio/-/minio-7.0.13.tgz#53c97e1b8382a1cdb3a846bfab45ba9a81e1795c"
+  resolved "https://registry.yarnpkg.com/@types/minio/-/minio-7.0.13.tgz#53c97e1b8382a1cdb3a846bfab45ba9a81e1795c"
   integrity sha512-Warrx6uN4KEpBCAWiTh7ngrPoaNIckawtBXqWbFzaatG/NPRZToAv/fa9yAPA7a2FHAGhe154KqaVIqacIn2pQ==
   dependencies:
     "@types/node" "*"
@@ -1593,7 +1593,7 @@
 
 "@zxing/text-encoding@0.9.0":
   version "0.9.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/@zxing/text-encoding/-/text-encoding-0.9.0.tgz#fb50ffabc6c7c66a0c96b4c03e3d9be74864b70b"
+  resolved "https://registry.yarnpkg.com/@zxing/text-encoding/-/text-encoding-0.9.0.tgz#fb50ffabc6c7c66a0c96b4c03e3d9be74864b70b"
   integrity sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==
 
 JSONStream@^1.0.4:
@@ -1928,7 +1928,7 @@ arrify@^1.0.1:
 
 asn1.js@^5.2.0:
   version "5.4.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/asn1.js/-/asn1.js-5.4.1.tgz#11a980b84ebb91781ce35b0fdc2ee294e3783f07"
+  resolved "https://registry.yarnpkg.com/asn1.js/-/asn1.js-5.4.1.tgz#11a980b84ebb91781ce35b0fdc2ee294e3783f07"
   integrity sha512-+I//4cYPccV8LdmBLiX8CYvf9Sp3vQsrqu2QNXRcrbiWvcx/UdlFiqUJJzxRQxgsZmvhXhn4cSKeSmoFjVdupA==
   dependencies:
     bn.js "^4.0.0"
@@ -1950,7 +1950,7 @@ async-retry@^1.2.1:
 
 async@^3.1.0:
   version "3.2.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
   integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
 
 asynckit@^0.4.0:
@@ -1965,7 +1965,7 @@ at-least-node@^1.0.0:
 
 available-typed-arrays@^1.0.5:
   version "1.0.5"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
+  resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 babel-jest@^27.3.1:
@@ -2048,19 +2048,19 @@ binary-extensions@^2.0.0:
 
 block-stream2@^2.0.0:
   version "2.1.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/block-stream2/-/block-stream2-2.1.0.tgz#ac0c5ef4298b3857796e05be8ebed72196fa054b"
+  resolved "https://registry.yarnpkg.com/block-stream2/-/block-stream2-2.1.0.tgz#ac0c5ef4298b3857796e05be8ebed72196fa054b"
   integrity sha512-suhjmLI57Ewpmq00qaygS8UgEq2ly2PCItenIyhMqVjo4t4pGzqMvfgJuX8iWTeSDdfSSqS6j38fL4ToNL7Pfg==
   dependencies:
     readable-stream "^3.4.0"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
   version "4.12.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
   integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
 
 bn.js@^5.0.0, bn.js@^5.1.1:
   version "5.2.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/bn.js/-/bn.js-5.2.1.tgz#0bc527a6a0d18d0aa8d5b0538ce4a77dccfa7b70"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-5.2.1.tgz#0bc527a6a0d18d0aa8d5b0538ce4a77dccfa7b70"
   integrity sha512-eXRvHzWyYPBuB4NBy0cmYQjGitUrtqwbvlzP3G6VFnNRbsZQIxQ10PbKKHt8gZ/HW/D/747aDl+QkDqg3KQLMQ==
 
 body-parser@1.20.0, body-parser@^1.19.0:
@@ -2098,12 +2098,12 @@ braces@^3.0.1, braces@~3.0.2:
 
 brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
+  resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
   integrity sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==
 
 browser-or-node@^1.3.0:
   version "1.3.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/browser-or-node/-/browser-or-node-1.3.0.tgz#f2a4e8568f60263050a6714b2cc236bb976647a7"
+  resolved "https://registry.yarnpkg.com/browser-or-node/-/browser-or-node-1.3.0.tgz#f2a4e8568f60263050a6714b2cc236bb976647a7"
   integrity sha512-0F2z/VSnLbmEeBcUrSuDH5l0HxTXdQQzLjkmBR4cYfvg1zJrKSlmIZFqyFR8oX0NrwPhy3c3HQ6i3OxMbew4Tg==
 
 browser-process-hrtime@^1.0.0:
@@ -2113,7 +2113,7 @@ browser-process-hrtime@^1.0.0:
 
 browserify-aes@^1.0.0, browserify-aes@^1.0.4:
   version "1.2.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/browserify-aes/-/browserify-aes-1.2.0.tgz#326734642f403dabc3003209853bb70ad428ef48"
+  resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-1.2.0.tgz#326734642f403dabc3003209853bb70ad428ef48"
   integrity sha512-+7CHXqGuspUn/Sl5aO7Ea0xWGAtETPXNSAjHo48JfLdPWcMng33Xe4znFvQweqc/uzk5zSOI3H52CYnjCfb5hA==
   dependencies:
     buffer-xor "^1.0.3"
@@ -2125,7 +2125,7 @@ browserify-aes@^1.0.0, browserify-aes@^1.0.4:
 
 browserify-cipher@^1.0.0:
   version "1.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/browserify-cipher/-/browserify-cipher-1.0.1.tgz#8d6474c1b870bfdabcd3bcfcc1934a10e94f15f0"
+  resolved "https://registry.yarnpkg.com/browserify-cipher/-/browserify-cipher-1.0.1.tgz#8d6474c1b870bfdabcd3bcfcc1934a10e94f15f0"
   integrity sha512-sPhkz0ARKbf4rRQt2hTpAHqn47X3llLkUGn+xEJzLjwY8LRs2p0v7ljvI5EyoRO/mexrNunNECisZs+gw2zz1w==
   dependencies:
     browserify-aes "^1.0.4"
@@ -2134,7 +2134,7 @@ browserify-cipher@^1.0.0:
 
 browserify-des@^1.0.0:
   version "1.0.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/browserify-des/-/browserify-des-1.0.2.tgz#3af4f1f59839403572f1c66204375f7a7f703e9c"
+  resolved "https://registry.yarnpkg.com/browserify-des/-/browserify-des-1.0.2.tgz#3af4f1f59839403572f1c66204375f7a7f703e9c"
   integrity sha512-BioO1xf3hFwz4kc6iBhI3ieDFompMhrMlnDFC4/0/vd5MokpuAc3R+LYbwTA9A5Yc9pq9UYPqffKpW2ObuwX5A==
   dependencies:
     cipher-base "^1.0.1"
@@ -2144,7 +2144,7 @@ browserify-des@^1.0.0:
 
 browserify-rsa@^4.0.0, browserify-rsa@^4.0.1:
   version "4.1.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/browserify-rsa/-/browserify-rsa-4.1.0.tgz#b2fd06b5b75ae297f7ce2dc651f918f5be158c8d"
+  resolved "https://registry.yarnpkg.com/browserify-rsa/-/browserify-rsa-4.1.0.tgz#b2fd06b5b75ae297f7ce2dc651f918f5be158c8d"
   integrity sha512-AdEER0Hkspgno2aR97SAf6vi0y0k8NuOpGnVH3O99rcA5Q6sh8QxcngtHuJ6uXwnfAXNM4Gn1Gb7/MV1+Ymbog==
   dependencies:
     bn.js "^5.0.0"
@@ -2152,7 +2152,7 @@ browserify-rsa@^4.0.0, browserify-rsa@^4.0.1:
 
 browserify-sign@^4.0.0:
   version "4.2.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/browserify-sign/-/browserify-sign-4.2.1.tgz#eaf4add46dd54be3bb3b36c0cf15abbeba7956c3"
+  resolved "https://registry.yarnpkg.com/browserify-sign/-/browserify-sign-4.2.1.tgz#eaf4add46dd54be3bb3b36c0cf15abbeba7956c3"
   integrity sha512-/vrA5fguVAKKAVTNJjgSm1tRQDHUU6DbwO9IROu/0WAzC8PKhucDSh18J0RMvVeHAn5puMd+QHC2erPRNf8lmg==
   dependencies:
     bn.js "^5.1.1"
@@ -2192,7 +2192,7 @@ bser@2.1.1:
 
 buffer-crc32@^0.2.13:
   version "0.2.13"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
+  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
   integrity sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==
 
 buffer-from@^1.0.0:
@@ -2207,7 +2207,7 @@ buffer-writer@2.0.0:
 
 buffer-xor@^1.0.3:
   version "1.0.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
+  resolved "https://registry.yarnpkg.com/buffer-xor/-/buffer-xor-1.0.3.tgz#26e61ed1422fb70dd42e6e36729ed51d855fe8d9"
   integrity sha512-571s0T7nZWK6vB67HI5dyUF7wXiNcfaPPPTl6zYCNApANjIvYJTg7hlud/+cJpdAhS7dVzqMLmfhfHR3rAcOjQ==
 
 busboy@^1.6.0:
@@ -2313,7 +2313,7 @@ ci-info@^3.2.0:
 
 cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   version "1.0.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
+  resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.4.tgz#8760e4ecc272f4c363532f926d874aae2c1397de"
   integrity sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q==
   dependencies:
     inherits "^2.0.1"
@@ -2715,7 +2715,7 @@ cosmiconfig@^7.0.0:
 
 create-ecdh@^4.0.0:
   version "4.0.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
+  resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.4.tgz#d6e7f4bffa66736085a0762fd3a632684dabcc4e"
   integrity sha512-mf+TCx8wWc9VpuxfP2ht0iSISLZnt0JgWlrOKZiNqyUZWnjIaCIVNQArMHnCZKfEYRg6IM7A+NeJoN8gf/Ws0A==
   dependencies:
     bn.js "^4.1.0"
@@ -2723,7 +2723,7 @@ create-ecdh@^4.0.0:
 
 create-hash@^1.1.0, create-hash@^1.1.2, create-hash@^1.2.0:
   version "1.2.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/create-hash/-/create-hash-1.2.0.tgz#889078af11a63756bcfb59bd221996be3a9ef196"
+  resolved "https://registry.yarnpkg.com/create-hash/-/create-hash-1.2.0.tgz#889078af11a63756bcfb59bd221996be3a9ef196"
   integrity sha512-z00bCGNHDG8mHAkP7CtT1qVu+bFQUPjYq/4Iv3C3kWjTFV10zIjfSoeqXo9Asws8gwSHDGj/hl2u4OGIjapeCg==
   dependencies:
     cipher-base "^1.0.1"
@@ -2734,7 +2734,7 @@ create-hash@^1.1.0, create-hash@^1.1.2, create-hash@^1.2.0:
 
 create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
   version "1.1.7"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/create-hmac/-/create-hmac-1.1.7.tgz#69170c78b3ab957147b2b8b04572e47ead2243ff"
+  resolved "https://registry.yarnpkg.com/create-hmac/-/create-hmac-1.1.7.tgz#69170c78b3ab957147b2b8b04572e47ead2243ff"
   integrity sha512-MJG9liiZ+ogc4TzUwuvbER1JRdgvUFSB5+VR/g5h82fGaIRWMWddtKBHi7/sVhfjQZ6SehlyhvQYrcYkaUIpLg==
   dependencies:
     cipher-base "^1.0.3"
@@ -2767,7 +2767,7 @@ cross-spawn@^7.0.1, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
 
 crypto-browserify@^3.12.0:
   version "3.12.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/crypto-browserify/-/crypto-browserify-3.12.0.tgz#396cf9f3137f03e4b8e532c58f698254e00f80ec"
+  resolved "https://registry.yarnpkg.com/crypto-browserify/-/crypto-browserify-3.12.0.tgz#396cf9f3137f03e4b8e532c58f698254e00f80ec"
   integrity sha512-fz4spIh+znjO2VjL+IdhEpRJ3YN6sMzITSBijk6FK2UvTqruSQW+/cCZTSNsMiZNvUeq0CqurF+dAbyiGOY6Wg==
   dependencies:
     browserify-cipher "^1.0.0"
@@ -2857,7 +2857,7 @@ decimal.js@^10.2.1:
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha512-hjf+xovcEn31w/EUYdTXQh/8smFL/dzYjohQGEIgjyNavaJfBY2p5F527Bo1VPATxv0VYTUC2bOcXvqFwk78Og==
 
 dedent@^0.7.0:
@@ -2884,7 +2884,7 @@ define-properties@^1.1.3:
 
 define-properties@^1.1.4:
   version "1.1.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/define-properties/-/define-properties-1.1.4.tgz#0b14d7bd7fbeb2f3572c3a7eda80ea5d57fb05b1"
+  resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.4.tgz#0b14d7bd7fbeb2f3572c3a7eda80ea5d57fb05b1"
   integrity sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==
   dependencies:
     has-property-descriptors "^1.0.0"
@@ -2902,7 +2902,7 @@ depd@2.0.0, depd@~2.0.0:
 
 des.js@^1.0.0:
   version "1.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/des.js/-/des.js-1.0.1.tgz#5382142e1bdc53f85d86d53e5f4aa7deb91e0843"
+  resolved "https://registry.yarnpkg.com/des.js/-/des.js-1.0.1.tgz#5382142e1bdc53f85d86d53e5f4aa7deb91e0843"
   integrity sha512-Q0I4pfFrv2VPd34/vfLrFOoRmlYj3OV50i7fskps1jZWK1kApMWWT9G6RRUeYedLcBDIhnSDaUvJMb3AhUlaEA==
   dependencies:
     inherits "^2.0.1"
@@ -2935,7 +2935,7 @@ diff@^4.0.1:
 
 diffie-hellman@^5.0.0:
   version "5.0.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
+  resolved "https://registry.yarnpkg.com/diffie-hellman/-/diffie-hellman-5.0.3.tgz#40e8ee98f55a2149607146921c63e1ae5f3d2875"
   integrity sha512-kqag/Nl+f3GwyK25fhUMYj81BUOrZ9IuJsjIcDE5icNM9FJHAVm3VcUDxdLPoQtTuUylWm6ZIknYJwwaPxsUzg==
   dependencies:
     bn.js "^4.1.0"
@@ -2989,7 +2989,7 @@ electron-to-chromium@^1.3.896:
 
 elliptic@^6.5.3:
   version "6.5.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
+  resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.5.4.tgz#da37cebd31e79a1367e941b592ed1fbebd58abbb"
   integrity sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==
   dependencies:
     bn.js "^4.11.9"
@@ -3054,7 +3054,7 @@ error-ex@^1.3.1:
 
 es-abstract@^1.19.0, es-abstract@^1.19.5, es-abstract@^1.20.0:
   version "1.20.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/es-abstract/-/es-abstract-1.20.3.tgz#90b143ff7aedc8b3d189bcfac7f1e3e3f81e9da1"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.20.3.tgz#90b143ff7aedc8b3d189bcfac7f1e3e3f81e9da1"
   integrity sha512-AyrnaKVpMzljIdwjzrj+LxGmj8ik2LckwXacHqrJJ/jxz6dDDBcZ7I7nlHM0FvEW8MfbWJwOd+yT2XzYW49Frw==
   dependencies:
     call-bind "^1.0.2"
@@ -3124,7 +3124,7 @@ es-to-primitive@^1.2.1:
 
 es6-error@^4.1.1:
   version "4.1.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/es6-error/-/es6-error-4.1.1.tgz#9e3af407459deed47e9a91f9b885a84eb05c561d"
+  resolved "https://registry.yarnpkg.com/es6-error/-/es6-error-4.1.1.tgz#9e3af407459deed47e9a91f9b885a84eb05c561d"
   integrity sha512-Um/+FxMr9CISWh0bi5Zv0iOD+4cFh5qLeks1qhAopKVAJw3drgKbKySikp7wGhDL0HPeaja0P5ULZrxLkniUVg==
 
 esbuild-android-64@0.15.5:
@@ -3427,7 +3427,7 @@ events@^3.2.0:
 
 evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
   version "1.0.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/evp_bytestokey/-/evp_bytestokey-1.0.3.tgz#7fcbdb198dc71959432efe13842684e0525acb02"
+  resolved "https://registry.yarnpkg.com/evp_bytestokey/-/evp_bytestokey-1.0.3.tgz#7fcbdb198dc71959432efe13842684e0525acb02"
   integrity sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==
   dependencies:
     md5.js "^1.3.4"
@@ -3562,7 +3562,7 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
 
 fast-xml-parser@^3.17.5:
   version "3.21.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/fast-xml-parser/-/fast-xml-parser-3.21.1.tgz#152a1d51d445380f7046b304672dd55d15c9e736"
+  resolved "https://registry.yarnpkg.com/fast-xml-parser/-/fast-xml-parser-3.21.1.tgz#152a1d51d445380f7046b304672dd55d15c9e736"
   integrity sha512-FTFVjYoBOZTJekiUsawGsSYV9QL0A+zDYCRj7y34IO6Jg+2IMYEtQa+bbictpdpV8dHxXywqU7C0gRDEOFtBFg==
   dependencies:
     strnum "^1.0.4"
@@ -3602,7 +3602,7 @@ fill-range@^7.0.1:
 
 filter-obj@^1.1.0:
   version "1.1.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/filter-obj/-/filter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
+  resolved "https://registry.yarnpkg.com/filter-obj/-/filter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
   integrity sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==
 
 finalhandler@1.2.0:
@@ -3723,7 +3723,7 @@ function-bind@^1.1.1:
 
 function.prototype.name@^1.1.5:
   version "1.1.5"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/function.prototype.name/-/function.prototype.name-1.1.5.tgz#cce0505fe1ffb80503e6f9e46cc64e46a12a9621"
+  resolved "https://registry.yarnpkg.com/function.prototype.name/-/function.prototype.name-1.1.5.tgz#cce0505fe1ffb80503e6f9e46cc64e46a12a9621"
   integrity sha512-uN7m/BzVKQnCUF/iW8jYea67v++2u7m5UgENbHRtdDVclOUP+FMPlCNdmk0h/ysGyo2tavMJEDqJAkJdRa1vMA==
   dependencies:
     call-bind "^1.0.2"
@@ -3738,7 +3738,7 @@ functional-red-black-tree@^1.0.1:
 
 functions-have-names@^1.2.2:
   version "1.2.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
+  resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
 gensync@^1.0.0-beta.2:
@@ -3762,7 +3762,7 @@ get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
 
 get-intrinsic@^1.1.3:
   version "1.1.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/get-intrinsic/-/get-intrinsic-1.1.3.tgz#063c84329ad93e83893c7f4f243ef63ffa351385"
+  resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.1.3.tgz#063c84329ad93e83893c7f4f243ef63ffa351385"
   integrity sha512-QJVz1Tj7MS099PevUG5jvnt9tSkXN8K14dxQlikJuPt4uD9hHAHjLyLBiLR5zELelBdD9QNRAXZzsJx0WaDL9A==
   dependencies:
     function-bind "^1.1.1"
@@ -3951,7 +3951,7 @@ has-bigints@^1.0.1:
 
 has-bigints@^1.0.2:
   version "1.0.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/has-bigints/-/has-bigints-1.0.2.tgz#0871bd3e3d51626f6ca0966668ba35d5602d6eaa"
+  resolved "https://registry.yarnpkg.com/has-bigints/-/has-bigints-1.0.2.tgz#0871bd3e3d51626f6ca0966668ba35d5602d6eaa"
   integrity sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==
 
 has-flag@^3.0.0:
@@ -3966,7 +3966,7 @@ has-flag@^4.0.0:
 
 has-property-descriptors@^1.0.0:
   version "1.0.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/has-property-descriptors/-/has-property-descriptors-1.0.0.tgz#610708600606d36961ed04c196193b6a607fa861"
+  resolved "https://registry.yarnpkg.com/has-property-descriptors/-/has-property-descriptors-1.0.0.tgz#610708600606d36961ed04c196193b6a607fa861"
   integrity sha512-62DVLZGoiEBDHQyqG4w9xCuZ7eJEwNmJRWw2VY84Oedb7WFcA27fiEVe8oUQx9hAUJ4ekurquucTGwsyO1XGdQ==
   dependencies:
     get-intrinsic "^1.1.1"
@@ -3978,7 +3978,7 @@ has-symbols@^1.0.1, has-symbols@^1.0.2:
 
 has-symbols@^1.0.3:
   version "1.0.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/has-symbols/-/has-symbols-1.0.3.tgz#bb7b2c4349251dce87b125f7bdf874aa7c8b39f8"
+  resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.3.tgz#bb7b2c4349251dce87b125f7bdf874aa7c8b39f8"
   integrity sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==
 
 has-tostringtag@^1.0.0:
@@ -3997,7 +3997,7 @@ has@^1.0.3:
 
 hash-base@^3.0.0:
   version "3.1.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/hash-base/-/hash-base-3.1.0.tgz#55c381d9e06e1d2997a883b4a3fddfe7f0d3af33"
+  resolved "https://registry.yarnpkg.com/hash-base/-/hash-base-3.1.0.tgz#55c381d9e06e1d2997a883b4a3fddfe7f0d3af33"
   integrity sha512-1nmYp/rhMDiE7AYkDw+lLwlAzz0AntGIe51F3RfFfEqyQ3feY2eI/NcwC6umIQVOASPMsWJLJScWKSSvzL9IVA==
   dependencies:
     inherits "^2.0.4"
@@ -4006,7 +4006,7 @@ hash-base@^3.0.0:
 
 hash.js@^1.0.0, hash.js@^1.0.3:
   version "1.1.7"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
+  resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.7.tgz#0babca538e8d4ee4a0f8988d68866537a003cf42"
   integrity sha512-taOaskGt4z4SOANNseOviYDvjEJinIkRgmp7LbKP2YTTmVxWBl87s/uzK9r+44BclBSp2X7K1hqeNfz9JbBeXA==
   dependencies:
     inherits "^2.0.3"
@@ -4019,7 +4019,7 @@ helmet@^6.0.0:
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
+  resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
   integrity sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg==
   dependencies:
     hash.js "^1.0.3"
@@ -4175,12 +4175,12 @@ ipaddr.js@1.9.1:
 
 ipaddr.js@^2.0.1:
   version "2.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/ipaddr.js/-/ipaddr.js-2.0.1.tgz#eca256a7a877e917aeb368b0a7497ddf42ef81c0"
+  resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-2.0.1.tgz#eca256a7a877e917aeb368b0a7497ddf42ef81c0"
   integrity sha512-1qTgH9NG+IIJ4yfKs2e6Pp1bZg8wbDbKHT21HrLIeYBTRLgMYKnMTPAuI3Lcs61nfx5h1xlXnbJtH1kX5/d/ng==
 
 is-arguments@^1.0.4:
   version "1.1.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/is-arguments/-/is-arguments-1.1.1.tgz#15b3f88fda01f2a97fec84ca761a560f123efa9b"
+  resolved "https://registry.yarnpkg.com/is-arguments/-/is-arguments-1.1.1.tgz#15b3f88fda01f2a97fec84ca761a560f123efa9b"
   integrity sha512-8Q7EARjzEnKpt/PCD7e1cgUS0a6X8u5tdSiMqXhojOdoV9TsMsiO+9VLC5vAmO8N7/GmXn7yjR8qnA6bVAEzfA==
   dependencies:
     call-bind "^1.0.2"
@@ -4220,7 +4220,7 @@ is-callable@^1.1.3, is-callable@^1.1.4, is-callable@^1.2.4:
 
 is-callable@^1.2.6:
   version "1.2.6"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/is-callable/-/is-callable-1.2.6.tgz#fd6170b0b8c7e2cc73de342ef8284a2202023c44"
+  resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.2.6.tgz#fd6170b0b8c7e2cc73de342ef8284a2202023c44"
   integrity sha512-krO72EO2NptOGAX2KYyqbP9vYMlNAXdB53rq6f8LXY6RY7JdSR/3BD6wLUlPHSAesmY9vstNrjvqGaCiRK/91Q==
 
 is-core-module@^2.2.0, is-core-module@^2.5.0:
@@ -4264,7 +4264,7 @@ is-generator-fn@^2.0.0:
 
 is-generator-function@^1.0.7:
   version "1.0.10"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/is-generator-function/-/is-generator-function-1.0.10.tgz#f1558baf1ac17e0deea7c0415c438351ff2b3c72"
+  resolved "https://registry.yarnpkg.com/is-generator-function/-/is-generator-function-1.0.10.tgz#f1558baf1ac17e0deea7c0415c438351ff2b3c72"
   integrity sha512-jsEjy9l3yiXEQ+PsXdmBwEPcOxaXWLspKdplFUVI9vq1iZgIekeC0L167qeu86czQaxed3q/Uzuw0swL0irL8A==
   dependencies:
     has-tostringtag "^1.0.0"
@@ -4335,7 +4335,7 @@ is-shared-array-buffer@^1.0.1:
 
 is-shared-array-buffer@^1.0.2:
   version "1.0.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/is-shared-array-buffer/-/is-shared-array-buffer-1.0.2.tgz#8f259c573b60b6a32d4058a1a07430c0a7344c79"
+  resolved "https://registry.yarnpkg.com/is-shared-array-buffer/-/is-shared-array-buffer-1.0.2.tgz#8f259c573b60b6a32d4058a1a07430c0a7344c79"
   integrity sha512-sqN2UDu1/0y6uvXyStCOzyhAjCSlHceFoMKJW8W9EU9cvic/QdsZ0kEU93HEy3IUEFZIiH/3w+AH/UQbPHNdhA==
   dependencies:
     call-bind "^1.0.2"
@@ -4368,7 +4368,7 @@ is-text-path@^1.0.1:
 
 is-typed-array@^1.1.3, is-typed-array@^1.1.9:
   version "1.1.9"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/is-typed-array/-/is-typed-array-1.1.9.tgz#246d77d2871e7d9f5aeb1d54b9f52c71329ece67"
+  resolved "https://registry.yarnpkg.com/is-typed-array/-/is-typed-array-1.1.9.tgz#246d77d2871e7d9f5aeb1d54b9f52c71329ece67"
   integrity sha512-kfrlnTTn8pZkfpJMUgYD7YZ3qzeJgWUn8XfVYBARc4wnmNOmLbmuuaAs3q5fvB0UJOn6yHAKaGTPM7d6ezoD/A==
   dependencies:
     available-typed-arrays "^1.0.5"
@@ -4970,7 +4970,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
 
 json-stream@^1.0.0:
   version "1.0.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/json-stream/-/json-stream-1.0.0.tgz#1a3854e28d2bbeeab31cc7ddf683d2ddc5652708"
+  resolved "https://registry.yarnpkg.com/json-stream/-/json-stream-1.0.0.tgz#1a3854e28d2bbeeab31cc7ddf683d2ddc5652708"
   integrity sha512-H/ZGY0nIAg3QcOwE1QN/rK/Fa7gJn7Ii5obwp6zyPO4xiPNwpIMjqy2gwjBEGqzkF/vSWEIBQCBuN19hYiL6Qg==
 
 json-stringify-safe@^5.0.1:
@@ -5253,7 +5253,7 @@ map-obj@^4.0.0:
 
 md5.js@^1.3.4:
   version "1.3.5"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
+  resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
   integrity sha512-xitP+WxNPcTTOgnTJcrhM0xvdPepipPSf3I8EIpGKeFLjt3PlJLIDG3u8EX53ZIubkb+5U2+3rELYpEhHhzdkg==
   dependencies:
     hash-base "^3.0.0"
@@ -5312,7 +5312,7 @@ micromatch@^4.0.0, micromatch@^4.0.4:
 
 miller-rabin@^4.0.0:
   version "4.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
+  resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
   integrity sha512-115fLhvZVqWwHPbClyntxEVfVDfl9DLLTuJvq3g2O/Oxi8AiNouAHvDSzHS0viUJc+V5vm3eq91Xwqn9dp4jRA==
   dependencies:
     bn.js "^4.0.0"
@@ -5347,12 +5347,12 @@ min-indent@^1.0.0:
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
+  resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
 minimalistic-crypto-utils@^1.0.1:
   version "1.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
+  resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==
 
 minimatch@^3.0.4:
@@ -5378,7 +5378,7 @@ minimist@^1.2.5, minimist@^1.2.6:
 
 minio@^7.0.32:
   version "7.0.32"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/minio/-/minio-7.0.32.tgz#fed6a4679c5954d3efc6df47f73f7e7124446e2c"
+  resolved "https://registry.yarnpkg.com/minio/-/minio-7.0.32.tgz#fed6a4679c5954d3efc6df47f73f7e7124446e2c"
   integrity sha512-txa7Vr0N24MKzeAybP/wY1jxbLnfGHXwZYyfFXuMW55HX2+HOcKEIgH4hU6Qj/kiMgyXs/ozHjAuLIDrR8nwLg==
   dependencies:
     async "^3.1.0"
@@ -5401,7 +5401,7 @@ minio@^7.0.32:
 
 mkdirp@^0.5.1:
   version "0.5.6"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/mkdirp/-/mkdirp-0.5.6.tgz#7def03d2432dcae4ba1d611445c48396062255f6"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.6.tgz#7def03d2432dcae4ba1d611445c48396062255f6"
   integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
   dependencies:
     minimist "^1.2.6"
@@ -5528,7 +5528,7 @@ object-inspect@^1.11.0:
 
 object-inspect@^1.12.2:
   version "1.12.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/object-inspect/-/object-inspect-1.12.2.tgz#c0641f26394532f28ab8d796ab954e43c009a8ea"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.12.2.tgz#c0641f26394532f28ab8d796ab954e43c009a8ea"
   integrity sha512-z+cPxW0QGUp0mcqcsgQyLVRDoXFQbXOwBaqyF7VIgI4TWNQsDHrBpUQslRmIfAoYWdYzs6UlKJtB2XJpTaNSpQ==
 
 object-inspect@^1.9.0:
@@ -5553,7 +5553,7 @@ object.assign@^4.1.2:
 
 object.assign@^4.1.4:
   version "4.1.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/object.assign/-/object.assign-4.1.4.tgz#9673c7c7c351ab8c4d0b516f4343ebf4dfb7799f"
+  resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.4.tgz#9673c7c7c351ab8c4d0b516f4343ebf4dfb7799f"
   integrity sha512-1mxKf0e58bvyjSCtKYY4sRe9itRk3PJpquJOjeIkz885CczcI4IvJJDLPS72oowuSh+pBxUFROpX+TU++hxhZQ==
   dependencies:
     call-bind "^1.0.2"
@@ -5707,7 +5707,7 @@ parent-module@^1.0.0:
 
 parse-asn1@^5.0.0, parse-asn1@^5.1.5:
   version "5.1.6"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/parse-asn1/-/parse-asn1-5.1.6.tgz#385080a3ec13cb62a62d39409cb3e88844cdaed4"
+  resolved "https://registry.yarnpkg.com/parse-asn1/-/parse-asn1-5.1.6.tgz#385080a3ec13cb62a62d39409cb3e88844cdaed4"
   integrity sha512-RnZRo1EPU6JBnra2vGHj0yhp6ebyjBZpmUCLHWiFhxlzvBCCpAuZ7elsBp1PVAbQN0/04VD/19rfzlBSwLstMw==
   dependencies:
     asn1.js "^5.2.0"
@@ -5788,7 +5788,7 @@ path-type@^4.0.0:
 
 pbkdf2@^3.0.3:
   version "3.1.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/pbkdf2/-/pbkdf2-3.1.2.tgz#dd822aa0887580e52f1a039dc3eda108efae3075"
+  resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.1.2.tgz#dd822aa0887580e52f1a039dc3eda108efae3075"
   integrity sha512-iuh7L6jA7JEGu2WxDwtQP1ddOpaJNC4KlDEFfdQajSGgGPNi4OyDc2R7QnbY2bR9QjBVGwgvTdNJZoE7RaxUMA==
   dependencies:
     create-hash "^1.1.2"
@@ -5972,7 +5972,7 @@ psl@^1.1.33:
 
 public-encrypt@^4.0.0:
   version "4.0.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/public-encrypt/-/public-encrypt-4.0.3.tgz#4fcc9d77a07e48ba7527e7cbe0de33d0701331e0"
+  resolved "https://registry.yarnpkg.com/public-encrypt/-/public-encrypt-4.0.3.tgz#4fcc9d77a07e48ba7527e7cbe0de33d0701331e0"
   integrity sha512-zVpa8oKZSz5bTMTFClc1fQOnyyEzpl5ozpi1B5YcvBrdohMjH2rfsBtyXcuNuwjsDIXmBYlF2N5FlJYhR29t8Q==
   dependencies:
     bn.js "^4.1.0"
@@ -6001,7 +6001,7 @@ qs@6.10.3:
 
 query-string@^7.1.1:
   version "7.1.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/query-string/-/query-string-7.1.1.tgz#754620669db978625a90f635f12617c271a088e1"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-7.1.1.tgz#754620669db978625a90f635f12617c271a088e1"
   integrity sha512-MplouLRDHBZSG9z7fpuAAcI7aAYjDLhtsiVZsevsfaHWDS2IDdORKbSd1kWUA+V4zyva/HZoSfpwnYMMQDhb0w==
   dependencies:
     decode-uri-component "^0.2.0"
@@ -6028,7 +6028,7 @@ randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
 
 randomfill@^1.0.3:
   version "1.0.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/randomfill/-/randomfill-1.0.4.tgz#c92196fc86ab42be983f1bf31778224931d61458"
+  resolved "https://registry.yarnpkg.com/randomfill/-/randomfill-1.0.4.tgz#c92196fc86ab42be983f1bf31778224931d61458"
   integrity sha512-87lcbR8+MhcWcUiQ+9e+Rwx8MyR2P7qnt15ynUlbm3TU/fjbgz4GsvfSUDTemtCCtVCqb4ZcEFlyPNTh9bBTLw==
   dependencies:
     randombytes "^2.0.5"
@@ -6143,7 +6143,7 @@ redent@^3.0.0:
 
 regexp.prototype.flags@^1.4.3:
   version "1.4.3"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/regexp.prototype.flags/-/regexp.prototype.flags-1.4.3.tgz#87cab30f80f66660181a3bb7bf5981a872b367ac"
+  resolved "https://registry.yarnpkg.com/regexp.prototype.flags/-/regexp.prototype.flags-1.4.3.tgz#87cab30f80f66660181a3bb7bf5981a872b367ac"
   integrity sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==
   dependencies:
     call-bind "^1.0.2"
@@ -6241,7 +6241,7 @@ rimraf@^3.0.0, rimraf@^3.0.2:
 
 ripemd160@^2.0.0, ripemd160@^2.0.1:
   version "2.0.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/ripemd160/-/ripemd160-2.0.2.tgz#a1c1a6f624751577ba5d07914cbc92850585890c"
+  resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-2.0.2.tgz#a1c1a6f624751577ba5d07914cbc92850585890c"
   integrity sha512-ii4iagi25WusVoiC4B4lq7pbXfAp3D9v5CwfkY33vffw2+pkDjY1D8GaN7spsxvCSx8dkPqOZCEZyfxcmJG2IA==
   dependencies:
     hash-base "^3.0.0"
@@ -6273,7 +6273,7 @@ safe-buffer@5.2.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, s
 
 safe-regex-test@^1.0.0:
   version "1.0.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/safe-regex-test/-/safe-regex-test-1.0.0.tgz#793b874d524eb3640d1873aad03596db2d4f2295"
+  resolved "https://registry.yarnpkg.com/safe-regex-test/-/safe-regex-test-1.0.0.tgz#793b874d524eb3640d1873aad03596db2d4f2295"
   integrity sha512-JBUUzyOgEwXQY1NuPtvcj/qcBDbDmEvWufhlnXZIm75DEHp+afM1r1ujJpJsV/gSM4t59tpDyPi1sd6ZaPFfsA==
   dependencies:
     call-bind "^1.0.2"
@@ -6287,7 +6287,7 @@ safe-regex-test@^1.0.0:
 
 sax@>=0.6.0:
   version "1.2.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
 saxes@^5.0.1:
@@ -6497,7 +6497,7 @@ spdx-license-ids@^3.0.0:
 
 split-on-first@^1.0.0:
   version "1.1.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
+  resolved "https://registry.yarnpkg.com/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
   integrity sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==
 
 split2@^3.0.0, split2@^3.1.1:
@@ -6538,7 +6538,7 @@ streamsearch@^1.1.0:
 
 strict-uri-encode@^2.0.0:
   version "2.0.0"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
+  resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
   integrity sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==
 
 string-argv@^0.3.1:
@@ -6591,7 +6591,7 @@ string.prototype.trimend@^1.0.4:
 
 string.prototype.trimend@^1.0.5:
   version "1.0.5"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/string.prototype.trimend/-/string.prototype.trimend-1.0.5.tgz#914a65baaab25fbdd4ee291ca7dde57e869cb8d0"
+  resolved "https://registry.yarnpkg.com/string.prototype.trimend/-/string.prototype.trimend-1.0.5.tgz#914a65baaab25fbdd4ee291ca7dde57e869cb8d0"
   integrity sha512-I7RGvmjV4pJ7O3kdf+LXFpVfdNOxtCW/2C8f6jNiW4+PQchwxkCDzlk1/7p+Wl4bqFIZeF47qAHXLuHHWKAxog==
   dependencies:
     call-bind "^1.0.2"
@@ -6608,7 +6608,7 @@ string.prototype.trimstart@^1.0.4:
 
 string.prototype.trimstart@^1.0.5:
   version "1.0.5"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/string.prototype.trimstart/-/string.prototype.trimstart-1.0.5.tgz#5466d93ba58cfa2134839f81d7f42437e8c01fef"
+  resolved "https://registry.yarnpkg.com/string.prototype.trimstart/-/string.prototype.trimstart-1.0.5.tgz#5466d93ba58cfa2134839f81d7f42437e8c01fef"
   integrity sha512-THx16TJCGlsN0o6dl2o6ncWUsdgnLRSA23rRE5pyGBw/mLr3Ej/R2LaqCtgP8VNMGZsvMWnf9ooZPyY2bHvUFg==
   dependencies:
     call-bind "^1.0.2"
@@ -6684,7 +6684,7 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
 
 strnum@^1.0.4:
   version "1.0.5"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
+  resolved "https://registry.yarnpkg.com/strnum/-/strnum-1.0.5.tgz#5c4e829fe15ad4ff0d20c3db5ac97b73c9b072db"
   integrity sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==
 
 supports-color@^5.3.0:
@@ -6823,7 +6823,7 @@ through2@^2.0.0:
 
 through2@^3.0.1:
   version "3.0.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/through2/-/through2-3.0.2.tgz#99f88931cfc761ec7678b41d5d7336b5b6a07bf4"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-3.0.2.tgz#99f88931cfc761ec7678b41d5d7336b5b6a07bf4"
   integrity sha512-enaDQ4MUyP2W6ZyT6EsMzqBPZaM/avg8iuo+l2d3QCs0J+6RaqkHV/2/lOwDTueBHeJ/2LG9lrLW3d5rWPucuQ==
   dependencies:
     inherits "^2.0.4"
@@ -7101,7 +7101,7 @@ unbox-primitive@^1.0.1:
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/unbox-primitive/-/unbox-primitive-1.0.2.tgz#29032021057d5e6cdbd08c5129c226dff8ed6f9e"
+  resolved "https://registry.yarnpkg.com/unbox-primitive/-/unbox-primitive-1.0.2.tgz#29032021057d5e6cdbd08c5129c226dff8ed6f9e"
   integrity sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==
   dependencies:
     call-bind "^1.0.2"
@@ -7149,7 +7149,7 @@ util.promisify@^1.0.0:
 
 util@^0.12.3:
   version "0.12.4"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/util/-/util-0.12.4.tgz#66121a31420df8f01ca0c464be15dfa1d1850253"
+  resolved "https://registry.yarnpkg.com/util/-/util-0.12.4.tgz#66121a31420df8f01ca0c464be15dfa1d1850253"
   integrity sha512-bxZ9qtSlGUWSOy9Qa9Xgk11kSslpuZwaxCg4sNIDj6FLucDab2JxnHwyNTCpHMtK1MjoQiWQ6DiUMZYbSrO+Sw==
   dependencies:
     inherits "^2.0.3"
@@ -7242,7 +7242,7 @@ watchpack@^2.4.0:
 
 web-encoding@^1.1.5:
   version "1.1.5"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/web-encoding/-/web-encoding-1.1.5.tgz#fc810cf7667364a6335c939913f5051d3e0c4864"
+  resolved "https://registry.yarnpkg.com/web-encoding/-/web-encoding-1.1.5.tgz#fc810cf7667364a6335c939913f5051d3e0c4864"
   integrity sha512-HYLeVCdJ0+lBYV2FvNZmv3HJ2Nt0QYXqZojk3d9FJOLkwnuhzM9tmamh8d7HPM8QqjKH8DeHkFTx+CFlWpZZDA==
   dependencies:
     util "^0.12.3"
@@ -7382,7 +7382,7 @@ which-module@^2.0.0:
 
 which-typed-array@^1.1.2:
   version "1.1.8"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/which-typed-array/-/which-typed-array-1.1.8.tgz#0cfd53401a6f334d90ed1125754a42ed663eb01f"
+  resolved "https://registry.yarnpkg.com/which-typed-array/-/which-typed-array-1.1.8.tgz#0cfd53401a6f334d90ed1125754a42ed663eb01f"
   integrity sha512-Jn4e5PItbcAHyLoRDwvPj1ypu27DJbtdYXUa5zsinrUx77Uvfb0cXwwnGMTn7cjUfhhqgVQnVJCwF+7cgU7tpw==
   dependencies:
     available-typed-arrays "^1.0.5"
@@ -7468,7 +7468,7 @@ xml-name-validator@^3.0.0:
 
 xml2js@^0.4.15:
   version "0.4.23"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/xml2js/-/xml2js-0.4.23.tgz#a0c69516752421eb2ac758ee4d4ccf58843eac66"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.23.tgz#a0c69516752421eb2ac758ee4d4ccf58843eac66"
   integrity sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==
   dependencies:
     sax ">=0.6.0"
@@ -7476,12 +7476,12 @@ xml2js@^0.4.15:
 
 xml@^1.0.0:
   version "1.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
+  resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
   integrity sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==
 
 xmlbuilder@~11.0.0:
   version "11.0.1"
-  resolved "https://artifacts-west.pwc.com:443/artifactory/api/npm/w00026-pwc-us-digital-concourse-npm/xmlbuilder/-/xmlbuilder-11.0.1.tgz#be9bae1c8a046e76b31127726347d0ad7002beb3"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-11.0.1.tgz#be9bae1c8a046e76b31127726347d0ad7002beb3"
   integrity sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==
 
 xmlchars@^2.2.0:
