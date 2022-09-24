@@ -31,7 +31,7 @@
   "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
   "version:patch": "yarn version --patch",
   "version:minor": "yarn version --minor",
-  "prepare": "husky install"
+  "prepare": "is-ci || husky install"
  },
  "keywords": [
   "express",
@@ -77,6 +77,7 @@
   "eslint": "^7.19.0",
   "eslint-config-prettier": "^8.5.0",
   "husky": "^8.0.1",
+  "is-ci": "^3.0.1",
   "jest": "^27.0.3",
   "license-check-and-add": "^4.0.5",
   "lint-staged": "^12.1.1",
