@@ -58,7 +58,7 @@
   "lodash": "^4.17.21",
   "minio": "^7.0.32",
   "morgan": "^1.10.0",
-  "pg": "^8.0.3"
+  "pg": "^8.8.0"
  },
  "devDependencies": {
   "@commitlint/cli": "^17.1.2",
