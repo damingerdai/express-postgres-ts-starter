@@ -16,12 +16,15 @@
 import express from 'express';
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
 import { ApolloServer } from 'apollo-server-express';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 import { middlewares } from './src/middlewares';
 import { router } from './src/routes';
 import { config } from './src/config';
 import { resolvers } from './src/graphql/resolvers';
 import { typeDefs } from './src/graphql/schema';
+import { logger } from './src/lib/logger';
 
 async function startServer() {
 	const app = express();
@@ -49,7 +52,7 @@ async function startServer() {
 	app.use('/', router);
 
 	app.listen(serverConfig.port, () => {
-		console.log(`The server has started on port ${serverConfig.port}`);
+		logger.info(`The server has started on port ${serverConfig.port}`);
 	});
 }
 
