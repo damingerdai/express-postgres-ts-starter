@@ -58,11 +58,22 @@ services:
    timeout: 20s
    retries: 3
   restart: on-failure
+ redis:
+  image: redis:7.0.5-alpine3.16
+  container_name: redis
+  ports:
+   - 6379:6379
+  networks:
+   - daming-network
+  volumes:
+   - daming-redis-volume:/data/redis
 
 volumes:
  daming-volume:
   external: true
  daming-minio-volume:
+  external: true
+ daming-redis-volume:
   external: true
 
 networks:
