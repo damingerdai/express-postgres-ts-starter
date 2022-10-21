@@ -14,9 +14,12 @@
  * limitations under the License.
  */
 import { Request } from 'express';
+import { redisService } from '../lib/redis';
 
 export const contextBuilder = (request: Request): unknown => {
 	return {
-		request
+		request,
+
+		redisService
 	};
 };
