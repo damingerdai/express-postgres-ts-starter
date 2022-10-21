@@ -16,4 +16,6 @@
 . "$(dirname "$0")/_/husky.sh"
 . "$(dirname "$0")/common.sh"
 
+yarn lint
+yarn build
 yarn audit || true
