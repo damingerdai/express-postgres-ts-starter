@@ -70,7 +70,7 @@
   "@types/helmet": "^0.0.47",
   "@types/jest": "^26.0.24",
   "@types/joi": "^17.2.3",
-  "@types/minio": "^7.0.13",
+  "@types/minio": "^7.0.14",
   "@typescript-eslint/eslint-plugin": "^4.0.0",
   "@typescript-eslint/parser": "^3.9.0",
   "conventional-changelog-cli": "^2.2.2",
