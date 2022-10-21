@@ -20,11 +20,18 @@ RUN npm config set strict-ssl false
 RUN yarn config set strict-ssl false
 
 COPY package.json yarn.lock /tmp/
-RUN cd /tmp && yarn install
+RUN cd /tmp && yarn install --frozen-lockfile --non-interactive
 RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 
 WORKDIR /app
 COPY . /app
+
+RUN yarn build
+
+FROM BUILD AS CI
+WORKDIR /app
+RUN yarn run test:ci && yarn install --frozen-lockfile --non-interactive --production
+
 
 FROM node:16.14.0-alpine as RELEASE
 
@@ -36,12 +43,13 @@ RUN yarn config set strict-ssl false
 RUN mkdir -p /app
 
 WORKDIR /app
-COPY . /app
-COPY --from=build /app .
-RUN npm prune --production
+COPY --from=CI /app/dist ./dist
+COPY --from=CI /app/node_modules ./node_modules
+COPY --from=CI /app/package.json .
 
 # Define the url as the healthcheck
-HEALTHCHECK CMD curl --fail http://localhost:3000/ping || exit 1
+HEALTHCHECK --interval=30s --timeout=30s CMD curl --fail http://localhost:3000/ping || exit 1
 
 # Start 'er up
-CMD ["yarn", "start:dev"]
+EXPOSE 3000
+CMD ["sh", "-c", "node dist/index.js"]
