@@ -23,6 +23,9 @@ on:
  pull_request:
   branches: [master, develop]
 
+env:
+ REGISTRY_NAME: github.com
+
 jobs:
  build:
   runs-on: ${{ matrix.os }}
@@ -61,3 +64,15 @@ jobs:
    - name: Test check
      if: matrix.os == 'ubuntu-latest'
      run: yarn test:ci
+ build-docker:
+  runs-on: ubuntu-latest
+  needs: [build]
+  steps:
+   - uses: actions/checkout@master
+   # Container build
+   - name: Build docker
+     id: build-docker-g
+     run: |
+      docker build . -t ${{ env.REGISTRY_NAME }}/damingerdai/express-postgres-ts-starter:${{ github.sha }} -f Dockerfile
+   - name: Image digest for gradle
+     run: echo ${{ steps.build-docker.outputs.digest }}
