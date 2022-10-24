@@ -61,12 +61,12 @@ export const config = {
 		isProduction: process.env.NODE_ENV?.toLowerCase() === 'production'
 	},
 	minio: {
-		endPoint: '127.0.0.1',
-		port: 9000,
-		useSSL: false,
-		accessKey: 'minioadmin',
-		secretKey: 'minioadmin',
-		bucket: 'daming'
+		endPoint: process.env.MINIO_ENDPOINT,
+		port: process.env.MINIO_PORT ? parseInt(process.env.MINIO_PORT, 10) : 9000,
+		useSSL: process.env.MINIO_USESSL === 'true',
+		accessKey: process.env.MINIO_ACCESSKEY,
+		secretKey: process.env.MINIO_SECRETKEY,
+		bucket: process.env.MINIO_BUCKET
 	},
 	redis: {
 		host: process.env.REDIS_HOST,
