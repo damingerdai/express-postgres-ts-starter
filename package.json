@@ -1,6 +1,6 @@
 {
  "name": "express-postgres-ts-starter",
- "version": "0.2.0",
+ "version": "0.3.0",
  "description": "express-postgres-ts-starter",
  "main": "server.ts",
  "engines": {

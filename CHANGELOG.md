@@ -1,3 +1,25 @@
+# [0.3.0](https://github.com/damingerdai/express-postgres-ts-starter/compare/v0.2.0...v0.3.0) (2022-10-24)
+
+### Bug Fixes
+
+- remove 'no-unused-vars' eslint rules ([705373d](https://github.com/damingerdai/express-postgres-ts-starter/commit/705373d5873091f1256ae0025014401790eeb536))
+- use new knex import statement ([e945fa6](https://github.com/damingerdai/express-postgres-ts-starter/commit/e945fa60ea1ce1caa9a5eccd534025be43ef4e74))
+
+### Features
+
+- add compression middleware ([#175](https://github.com/damingerdai/express-postgres-ts-starter/issues/175)) ([05a6ad7](https://github.com/damingerdai/express-postgres-ts-starter/commit/05a6ad7f71d5623bbaa8ab6bee829925cbaa0655))
+- add eslint fix in lint-staged and run more check in pre-push git hook ([#215](https://github.com/damingerdai/express-postgres-ts-starter/issues/215)) ([3f6d3b4](https://github.com/damingerdai/express-postgres-ts-starter/commit/3f6d3b4d5443bfe8b368b35df30598258566c420))
+- add logger based on winston ([#212](https://github.com/damingerdai/express-postgres-ts-starter/issues/212)) ([d407a06](https://github.com/damingerdai/express-postgres-ts-starter/commit/d407a0646a33aecc1c85e5ff43fe437624016f28))
+- add minio config support ([f9bd6d0](https://github.com/damingerdai/express-postgres-ts-starter/commit/f9bd6d0497347d771fff155462cc252c66da0bac))
+- add morgan middleware ([eee1ded](https://github.com/damingerdai/express-postgres-ts-starter/commit/eee1ded006bf81f15057d2487dd0f4f8576cf435))
+- add redis docker image support ([#211](https://github.com/damingerdai/express-postgres-ts-starter/issues/211)) ([3ad948d](https://github.com/damingerdai/express-postgres-ts-starter/commit/3ad948dedfe0cd1a9ec48ebbc712cc1d888140f0))
+- add redis service ([#214](https://github.com/damingerdai/express-postgres-ts-starter/issues/214)) ([ba26948](https://github.com/damingerdai/express-postgres-ts-starter/commit/ba26948bc9f25d7836105bad57eb3f465fb030d8))
+- add upload file api support with minio ([#198](https://github.com/damingerdai/express-postgres-ts-starter/issues/198)) ([1fa0dac](https://github.com/damingerdai/express-postgres-ts-starter/commit/1fa0dac099051ac5b417ce2ca26572b510318698))
+- **db:** add pgcrypto migrations ([a09986f](https://github.com/damingerdai/express-postgres-ts-starter/commit/a09986f82cc24d0144dd3085531a16ded3b1c9a1))
+- **db:** db migrate script runs on local ([b98766d](https://github.com/damingerdai/express-postgres-ts-starter/commit/b98766d7becdcf5c88b8275445bcc445ac87a1a3))
+- **db:** db seed script support local env ([0b05ea1](https://github.com/damingerdai/express-postgres-ts-starter/commit/0b05ea1edbccc616e84f19ee46419a4de3d4126f))
+- set request body max size is 50mb ([46eb2bb](https://github.com/damingerdai/express-postgres-ts-starter/commit/46eb2bb0c4c08e2e3adddfa3cc31434c9d68003d))
+
 # [0.2.0](https://github.com/damingerdai/express-postgres-ts-starter/compare/v0.1.0...v0.2.0) (2020-12-26)
 
 ### Features
