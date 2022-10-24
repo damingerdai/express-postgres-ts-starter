@@ -13,44 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { config } from 'src/config';
-import { Response, Request } from 'express';
-import { minioClient } from './minio';
+import * as Minio from 'minio';
 import type { UploadedFile } from 'express-fileupload';
+import { config } from '../config';
+import { minioClient } from './minio';
 
-export const uploadImage = async (
-	req: Request,
-	res: Response
-): Promise<void> => {
-	if (!req.files || Object.keys(req.files).length === 0) {
-		res.status(400).json({
-			message: 'No files were uploaded.'
-		});
+export class FileService {
+	constructor(private ossClient: Minio.Client) {}
 
-		return;
+	public async uploadImage(inputFile: UploadedFile): Promise<string> {
+		// eslint-disable-next-line prefer-named-capture-group
+		const ext = inputFile.mimetype.match(/\w+\/(\w+)/)[1];
+		const inputFilename = inputFile.name + '.' + ext;
+		const minioConfig = config.minio;
+		const bucket = minioConfig.bucket;
+		const isExist = await this.ossClient.bucketExists(bucket);
+		if (!isExist) {
+			await this.ossClient.makeBucket(bucket, 'us-east-1');
+		}
+		await this.ossClient.putObject(bucket, inputFilename, inputFile.data);
+		return this.ossClient.presignedUrl('GET', bucket, inputFilename);
 	}
+}
 
-	const inputFile = req.files.file as UploadedFile;
-	// eslint-disable-next-line prefer-named-capture-group
-	const ext = inputFile.mimetype.match(/\w+\/(\w+)/)[1];
-	const inputFilename = inputFile.name + '.' + ext;
-
-	const minioConfig = config.minio;
-	const bucket = minioConfig.bucket;
-	const isExist = await minioClient.bucketExists(bucket);
-	if (!isExist) {
-		await minioClient.makeBucket(bucket, 'us-east-1');
-	}
-	await minioClient.putObject(bucket, inputFilename, inputFile.data);
-	const personedUrl = await minioClient.presignedUrl(
-		'GET',
-		bucket,
-		inputFilename
-	);
-	console.log(personedUrl);
-	res.status(200).json({ data: personedUrl });
-};
-
-export const FileService = {
-	uploadImage
-};
+export const fileService = new FileService(minioClient);

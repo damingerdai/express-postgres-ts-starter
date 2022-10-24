@@ -13,13 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { FileService } from 'src/service/file';
-import { IRoute } from 'src/types/routes';
+import { UploadedFile } from 'express-fileupload';
+import { contextBuilder } from '../graphql/context';
+import { IRoute } from '../types/routes';
 
 export const File: IRoute = {
 	method: 'POST',
 	path: '/uploadImage',
-	controller: (req, res) => {
-		FileService.uploadImage(req, res);
+	controller: async (req, res) => {
+		if (!req.files || Object.keys(req.files).length === 0) {
+			res.status(400).json({
+				error: 'No files were uploaded'
+			});
+
+			return;
+		}
+		const context = contextBuilder(req);
+		const fileService = context.fileService;
+		const personedUrl = await fileService.uploadImage(
+			req.files.file as UploadedFile
+		);
+		res.status(200).json({ data: personedUrl });
 	}
 };

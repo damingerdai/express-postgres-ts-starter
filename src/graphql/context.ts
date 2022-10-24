@@ -14,12 +14,22 @@
  * limitations under the License.
  */
 import { Request } from 'express';
+import { FileService, fileService } from '../service/file';
+import { RedisService } from '../service/redis';
 import { redisService } from '../lib/redis';
 
-export const contextBuilder = (request: Request): unknown => {
+export interface IContext {
+	request: Request;
+
+	fileService: FileService;
+	redisService: RedisService;
+}
+
+export const contextBuilder = (request: Request): IContext => {
 	return {
 		request,
 
+		fileService,
 		redisService
 	};
 };
