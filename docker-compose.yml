@@ -26,6 +26,10 @@ services:
   env_file: secrets/local.env
   ports:
    - 8080:3000
+  logging:
+   options:
+    max-size: '10m'
+    max-file: '5'
 
  db:
   image: postgres:15
