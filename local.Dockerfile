@@ -26,7 +26,7 @@ RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 WORKDIR /app
 COPY . /app
 
-FROM node:14.15.3-alpine as RELEASE
+FROM node:16.14.0-alpine  as RELEASE
 
 ENV SELF_SIGNED_CERT_IN_CHAIN=true
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0

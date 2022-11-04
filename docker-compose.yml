@@ -24,8 +24,14 @@ services:
    - .:/app
    - /app/node_modules/
   env_file: secrets/local.env
+  depends_on:
+   - db
+   - minio
+   - redis
   ports:
-   - 8080:3000
+   - 3000:3000
+  networks:
+   - daming-network
   logging:
    options:
     max-size: '10m'
@@ -62,6 +68,8 @@ services:
    timeout: 20s
    retries: 3
   restart: on-failure
+  networks:
+   - daming-network
  redis:
   image: redis:7.0.5-alpine3.16
   container_name: redis
