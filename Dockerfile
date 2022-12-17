@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM node:16.14.0-alpine as BUILD
+FROM node:18.12.1-alpine as build
 
 ENV SELF_SIGNED_CERT_IN_CHAIN=true
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -28,12 +28,12 @@ COPY . /app
 
 RUN yarn build
 
-FROM BUILD AS CI
+FROM build AS ci
 WORKDIR /app
 RUN yarn run test:ci && yarn install --frozen-lockfile --non-interactive --production
 
 
-FROM node:16.14.0-alpine as RELEASE
+FROM node:18.12.1-alpine as release
 
 ENV SELF_SIGNED_CERT_IN_CHAIN=true
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -43,13 +43,13 @@ RUN yarn config set strict-ssl false
 RUN mkdir -p /app
 
 WORKDIR /app
-COPY --from=CI /app/dist ./dist
-COPY --from=CI /app/node_modules ./node_modules
-COPY --from=CI /app/package.json .
+COPY --from=ci /app/dist ./dist
+COPY --from=ci /app/node_modules ./node_modules
+COPY --from=ci /app/package.json .
 
 # Define the url as the healthcheck
 HEALTHCHECK --interval=30s --timeout=30s CMD curl --fail http://localhost:3000/ping || exit 1
 
 # Start 'er up
 EXPOSE 3000
-CMD ["sh", "-c", "node dist/index.js"]
+CMD ["sh", "-c", "node dist/server.js"]

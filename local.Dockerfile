@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM node:16.14.0-alpine as BUILD
+FROM node:18.12.1-alpine as BUILD
 
 ENV SELF_SIGNED_CERT_IN_CHAIN=true
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -26,7 +26,7 @@ RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 WORKDIR /app
 COPY . /app
 
-FROM node:16.14.0-alpine  as RELEASE
+FROM node:18.12.1-alpine  as RELEASE
 
 ENV SELF_SIGNED_CERT_IN_CHAIN=true
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
