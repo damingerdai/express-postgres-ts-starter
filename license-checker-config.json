@@ -1,6 +1,7 @@
 {
  "ignore": [
   ".env",
+  ".eslintignore",
   ".git",
   ".github/ISSUE_TEMPLATE",
   "coverage",
