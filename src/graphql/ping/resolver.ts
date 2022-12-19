@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from 'merge-graphql-schemas';
-import { resolvers as ping } from './ping';
-
-const resolversArr = [ping];
-
-export const resolvers = mergeResolvers(resolversArr);
+export const resolvers = {
+	Query: {
+		// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+		ping: () => 'pong'
+	}
+};

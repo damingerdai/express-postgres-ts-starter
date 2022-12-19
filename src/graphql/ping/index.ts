@@ -13,9 +13,5 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from 'merge-graphql-schemas';
-import { resolvers as ping } from './ping';
-
-const resolversArr = [ping];
-
-export const resolvers = mergeResolvers(resolversArr);
+export * from './resolver';
+export * from './schema';

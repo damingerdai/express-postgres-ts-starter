@@ -24,7 +24,7 @@ import { router } from './src/routes';
 import { config } from './src/config';
 import { contextBuilder } from './src/graphql/context';
 import { resolvers } from './src/graphql/resolvers';
-import { typeDefs } from './src/graphql/schema';
+import { typeDefs } from './src/graphql/schemas';
 import { logger } from './src/lib/logger';
 
 async function startServer() {
