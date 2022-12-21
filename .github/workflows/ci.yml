@@ -106,8 +106,8 @@ jobs:
    - uses: actions/checkout@master
    # Container build
    - name: Build docker
-     id: build-docker-g
+     id: build-docker
      run: |
       docker build . -t ${{ env.REGISTRY_NAME }}/damingerdai/express-postgres-ts-starter:${{ github.sha }} -f Dockerfile
-   - name: Image digest for gradle
+   - name: Image digest
      run: echo ${{ steps.build-docker.outputs.digest }}
