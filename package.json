@@ -15,7 +15,7 @@
   "test": "jest --runInBand --detectOpenHandles --forceExit",
   "test:ci": "jest --runInBand --detectOpenHandles --forceExit --coverage",
   "check:license": "license-check-and-add check",
-  "check:license:fix": "license-check-and-add check",
+  "check:license:fix": "license-check-and-add add",
   "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s",
   "changelog:all": "npx conventional-changelog -p angular -i CHANGELOG.md -w -s 0",
   "migrate:make": "./node_modules/.bin/knex --knexfile db/knexfile.js migrate:make $@",

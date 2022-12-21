@@ -1,0 +1,100 @@
+# Copyright 2020 大明二代
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: express-postgres-ts-starter-postgres-config
+  namespace: express-postgres-ts-starter-namespace
+  labels:
+    app: postgres
+data:
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: '123456'
+  POSTGRES_DB: postgres
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: express-postgres-ts-starter-postgres-pv-claim
+  namespace: express-postgres-ts-starter-namespace
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: express-postgres-ts-starter-postgres-pv-volume
+  namespace: express-postgres-ts-starter-namespace
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  namespace: express-postgres-ts-starter-namespace
+spec:
+  serviceName: "postgres"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:15
+          envFrom:
+            - configMapRef:
+                name: express-postgres-ts-starter-postgres-config
+          ports:
+            - containerPort: 5432
+              name: postgres
+          volumeMounts:
+            - name: postgres-data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: postgres-data
+          persistentVolumeClaim:
+            claimName: express-postgres-ts-starter-postgres-pv-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: express-postgres-ts-starter-namespace
+  labels:
+    app: postgres
+spec:
+  ports:
+    - port: 5432
+      targetPort: 5432
+  type: NodePort
+  selector:
+    app: postgres

@@ -12,20 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# editorconfig.org
-root = true
-
-[*]
-indent_style = tab
-tab_width = 2
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.{json,yml,yaml,eslintrc,md,config}]
-indent_style = space
-indent_size = 2
-
-[*.{md}]
-trim_trailing_whitespace = false
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: express-postgres-ts-starter-config
+  namespace: express-postgres-ts-starter-namespace
+data:
+  app_port: '3000'
+  app_label: 'express-postgres-ts-starter'
+  postgres_ssl: 'false'
+  postgres_user: postgres
+  postgres_password: '123456'
+  postgres_host: postgres
+  postgres_db: postgres
+  redis_host: redis
+  redis_port: '6379'
+  redis_pass: '123456'
+  minio_endpoint: minio
+  minio_port: '9000'
+  minio_usessl: 'false'
+  minio_accesskey: minioadmin
+  minio_secretkey: minioadmin
+  minio_bucket: daming

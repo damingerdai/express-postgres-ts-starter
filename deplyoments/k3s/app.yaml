@@ -1,0 +1,142 @@
+# Copyright 2020 大明二代
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: express-postgres-ts-starter-namespace
+  name: express-postgres-ts-starter
+  labels:
+    app:  express-postgres-ts-starter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: express-postgres-ts-starter
+  template:
+    metadata:
+      labels:
+        app: express-postgres-ts-starter
+      name: express-postgres-ts-starter
+    spec:
+      containers:
+        - name: express-postgres-ts-starter
+          image: express-postgres-ts-starter
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "1Gi"
+            requests:
+              cpu: "256m"
+              memory: "256Mi"
+          env:
+            - name: APP_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: app_port
+            - name: APP_LABEL
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: app_label
+            - name: POSTGRES_SSL
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: postgres_ssl
+            - name: POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: postgres_user
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: postgres_password
+            - name: POSTGRES_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: postgres_host
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: postgres_db
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: redis_host
+            - name: REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: redis_port
+            - name: REDIS_PASS
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: redis_pass
+            - name: MINIO_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: minio_endpoint
+            - name: MINIO_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: minio_port
+            - name: MINIO_USESSL
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: minio_usessl
+            - name: MINIO_ACCESSKEY
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: minio_accesskey
+            - name: MINIO_SECRETKEY
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: minio_secretkey
+            - name: MINIO_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: express-postgres-ts-starter-config
+                  key: minio_bucket
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: express-postgres-ts-starter-namespace
+  name: express-postgres-ts-starter
+  labels:
+    app:  express-postgres-ts-starter
+spec:
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 30001
+  type: NodePort
+  selector:
+    app: express-postgres-ts-starter

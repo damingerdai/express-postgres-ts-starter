@@ -1,0 +1,118 @@
+# Copyright 2020 大明二代
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: express-postgres-ts-starter-redis-config
+  namespace: express-postgres-ts-starter-namespace
+  labels:
+    app: redis
+data:
+  redis.conf: |-
+    dir /data
+    port 6379
+    bind 0.0.0.0
+    appendonly yes
+    protected-mode no
+    requirepass  12345
+    pidfile /data/redis-6379.pid
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: express-postgres-ts-starter-redis-pvc
+  namespace: express-postgres-ts-starter-namespace
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual
+  # storageClassName: local-path
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: express-postgres-ts-starter-redis-pv-volume
+  namespace: express-postgres-ts-starter-namespace
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/redis-data"
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis
+  namespace: express-postgres-ts-starter-namespace
+spec:
+  serviceName: "redis"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+        name: redis
+    spec:
+      containers:
+        - name: redis-server
+          image: redis:6.2.8-alpine3.17
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          command:
+            - redis-server
+            - /etc/redis/redis.conf
+          ports:
+            - name: redis
+              containerPort: 6379
+          volumeMounts:
+            - name: lv-storage
+              mountPath: /data
+            - name: config
+              mountPath: /etc/redis/redis.conf
+              subPath: redis.conf
+          env:
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "yes"
+      volumes:
+        - name: lv-storage
+          persistentVolumeClaim:
+            claimName: express-postgres-ts-starter-redis-pvc
+        - name: config
+          configMap:
+            name: express-postgres-ts-starter-redis-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  namespace: express-postgres-ts-starter-namespace
+spec:
+  selector:
+    app: redis
+  type: NodePort
+  ports:
+    - port: 6379
+      targetPort: 6379
