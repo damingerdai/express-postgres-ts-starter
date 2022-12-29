@@ -22,6 +22,12 @@ import { BodyParserMiddleware } from './body-parser';
 import { Compression } from './compression';
 import { Morgan } from './morgan';
 
+export type NextHandleFunction = (
+	req?: express.Request,
+	res?: express.Response,
+	next?: express.NextFunction
+) => void;
+
 export const middlewares = [
 	BodyParserMiddleware,
 	cookieParser(),
@@ -34,4 +40,4 @@ export const middlewares = [
 	fileUpload(),
 	express.json({ limit: '50mb' }),
 	express.urlencoded({ extended: true, limit: '50mb' })
-];
+] as NextHandleFunction[];
