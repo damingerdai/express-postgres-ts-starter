@@ -17,6 +17,6 @@
   "baseUrl": ".",
   "noUnusedLocals": false
  },
- "include": ["src/**/*.ts", "index.ts", "server.ts", "test/**/*.ts"],
+ "include": ["src/**/*.ts", "server.ts", "test/**/*.ts"],
  "exclude": ["node_modules", "**/__tests__/**/*.ts"]
 }
