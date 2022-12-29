@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import { createClient } from 'redis';
-import { RedisService } from 'src/service/redis';
+import { RedisService } from '../service/redis';
 import { config } from '../config';
 import { logger } from './logger';
 

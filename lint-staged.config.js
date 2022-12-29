@@ -19,7 +19,8 @@ module.exports = {
 		const git = `git add ${filenames.join(' ')}`;
 		return [prettier, git];
 	},
-	'**/*.(j|t)s?(x)': filenames => filenames.length > 10
-		? 'yarn lint:ts --fix'
-		: `eslint --format stylish ${filenames.join(' ')} --fix`
+	'**/*.(j|t)s?(x)': filenames =>
+		filenames.length > 10
+			? 'yarn eslint:ts --fix'
+			: `eslint --format stylish ${filenames.join(' ')} --fix`
 };

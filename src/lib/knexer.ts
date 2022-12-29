@@ -14,16 +14,12 @@
  * limitations under the License.
  */
 import { Knex, knex } from 'knex';
+import { config } from '../config';
 import { PartialWithArray } from './util';
 
-const config: Knex.Config = {
-	client: 'sqlite3',
-	connection: {
-		filename: './data.db'
-	}
-};
+const dbConfig: Knex.Config = Object.freeze(config.db) as Knex.Config;
 
-const knexInstance = knex(config);
+const knexInstance = knex(dbConfig);
 
 export const t = knexInstance('user');
 

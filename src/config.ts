@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { camelCase, snakeCase } from 'src/lib';
+import { camelCase, snakeCase } from './lib/change-case';
 
 const specialChars = ['*'];
 
@@ -70,5 +70,10 @@ export const config = {
 		host: process.env.REDIS_HOST,
 		port: process.env.REDIS_PORT,
 		pass: process.env.REDIS_PASS
+	},
+	jwt: {
+		secret: process.env.JWT_SECRET,
+		algorithm: process.env.JWT_ALGORITHM,
+		ttl: process.env.JWT_TTL
 	}
 };

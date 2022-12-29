@@ -20,6 +20,9 @@ metadata:
 data:
   app_port: '3000'
   app_label: 'express-postgres-ts-starter'
+  jwt_secret: daming2023
+  jwt_algorithm: HS256
+  jwt_ttl: 2h
   postgres_ssl: 'false'
   postgres_user: postgres
   postgres_password: '123456'

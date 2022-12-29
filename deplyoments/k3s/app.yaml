@@ -54,6 +54,21 @@ spec:
                 configMapKeyRef:
                   name: express-postgres-ts-starter-config
                   key: app_label
+            - name: JWT_SECRET
+              valueFrom:
+                configMapKeyRef::
+                  name: express-postgres-ts-starter-config
+                  key: jwt_secret
+            - name: JWT_ALGORITHM
+              valueFrom:
+                configMapKeyRef::
+                  name: express-postgres-ts-starter-config
+                  key: jwt_algorithm
+            - name: JWT_TTL
+              valueFrom:
+                configMapKeyRef::
+                  name: express-postgres-ts-starter-config
+                  key: jwt_ttl
             - name: POSTGRES_SSL
               valueFrom:
                 configMapKeyRef:

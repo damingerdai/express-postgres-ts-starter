@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import morgan from 'morgan';
-import { config } from 'src/config';
+import { config } from '../config';
 
 export const Morgan = morgan('dev', {
 	skip: () => config.server.isProduction

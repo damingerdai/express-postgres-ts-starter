@@ -13,9 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export * from './change-case';
-export * from './jwt';
-export * from './knexer';
-export * from './logger';
-export * from './redis';
-export * from './util';
+import gql from 'graphql-tag';
+
+export const typeDefs = gql`
+	type Mutation {
+		createAccessToken(username: String!, password: String): String
+	}
+`;
