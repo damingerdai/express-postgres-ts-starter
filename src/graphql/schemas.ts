@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 import { mergeTypes } from 'merge-graphql-schemas';
+import { typeDefs as accessTokens } from './access-tokens';
 import { typeDefs as ping } from './ping';
 
-const schemas = [ping];
+const schemas = [accessTokens, ping];
 
 export const typeDefs = mergeTypes(schemas, { all: true });

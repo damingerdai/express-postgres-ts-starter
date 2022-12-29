@@ -13,9 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-export * from './change-case';
-export * from './jwt';
-export * from './knexer';
-export * from './logger';
-export * from './redis';
-export * from './util';
+
+import { encrypt } from '../../lib/jwt';
+
+interface ICredentials {
+	username: string;
+	password: string;
+}
+
+export const resolvers = {
+	Mutation: {
+		createAccessToken: (_root, credentials: ICredentials): Promise<string> => {
+			const { username, password } = credentials;
+
+			return encrypt(username, password);
+		}
+	}
+};

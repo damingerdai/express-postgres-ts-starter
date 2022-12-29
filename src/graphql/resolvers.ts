@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 import { mergeResolvers } from 'merge-graphql-schemas';
+import { resolvers as accessTokens } from './access-tokens';
 import { resolvers as ping } from './ping';
 
-const resolversArr = [ping];
+const resolversArr = [accessTokens, ping];
 
 export const resolvers = mergeResolvers(resolversArr);

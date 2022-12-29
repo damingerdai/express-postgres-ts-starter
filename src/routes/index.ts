@@ -18,7 +18,7 @@ import ExpressRouter from 'express-promise-router';
 
 import { File } from './file';
 import { Ping } from './ping';
-import { config } from 'src/config';
+import { config } from '../config';
 
 const expressRouter = ExpressRouter(config?.server?.router);
 

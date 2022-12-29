@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 import * as Minio from 'minio';
-import { config } from 'src/config';
+import { config } from '../config';
 
 const { minio: minioConfig } = config;
 
