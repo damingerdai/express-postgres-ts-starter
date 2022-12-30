@@ -89,7 +89,7 @@
   "is-ci": "^3.0.1",
   "jest": "^27.0.3",
   "license-check-and-add": "^4.0.5",
-  "lint-staged": "^13.0.3",
+  "lint-staged": "^13.1.0",
   "prettier": "^2.7.1",
   "ts-jest": "^27.0.2",
   "ts-loader": "^9.4.2",
