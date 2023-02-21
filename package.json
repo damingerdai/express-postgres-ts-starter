@@ -65,7 +65,7 @@
   "minio": "^7.0.32",
   "morgan": "^1.10.0",
   "pg": "^8.8.0",
-  "redis": "^4.5.1",
+  "redis": "^4.6.4",
   "winston": "^3.8.2"
  },
  "devDependencies": {
