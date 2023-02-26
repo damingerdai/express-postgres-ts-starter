@@ -64,7 +64,7 @@
   "merge-graphql-schemas": "^1.7.8",
   "minio": "^7.0.32",
   "morgan": "^1.10.0",
-  "pg": "^8.8.0",
+  "pg": "^8.9.0",
   "redis": "^4.6.5",
   "winston": "^3.8.2"
  },
