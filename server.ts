@@ -26,6 +26,7 @@ import { contextBuilder } from './src/graphql/context';
 import { resolvers } from './src/graphql/resolvers';
 import { typeDefs } from './src/graphql/schemas';
 import { logger } from './src/lib/logger';
+import { initializePgBoss } from './src/service/pg-boss';
 
 async function startServer() {
 	const app = express();
@@ -61,4 +62,5 @@ async function startServer() {
 /* istanbul ignore if: main scope */
 if (require.main === module) {
 	startServer();
+	initializePgBoss();
 }
