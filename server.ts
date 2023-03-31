@@ -14,15 +14,21 @@
  * limitations under the License.
  */
 import express from 'express';
-import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
-import { ApolloServer } from 'apollo-server-express';
+import { ApolloServer } from '@apollo/server';
+import { expressMiddleware } from '@apollo/server/express4';
+import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
+import {
+	ApolloServerPluginLandingPageLocalDefault,
+	ApolloServerPluginLandingPageProductionDefault
+} from '@apollo/server/plugin/landingPage/default';
 import * as dotenv from 'dotenv';
+import http from 'http';
 dotenv.config();
 
 import { middlewares } from './src/middlewares';
 import { router } from './src/routes';
 import { config } from './src/config';
-import { contextBuilder } from './src/graphql/context';
+import { IContext, contextBuilder } from './src/graphql/context';
 import { resolvers } from './src/graphql/resolvers';
 import { typeDefs } from './src/graphql/schemas';
 import { logger } from './src/lib/logger';
@@ -34,23 +40,26 @@ async function startServer() {
 	const serverConfig = config.server;
 	middlewares.forEach(mid => app.use(mid));
 
-	const server = new ApolloServer({
-		context: contextBuilder,
-		resolvers,
+	const httpServer = http.createServer(app);
+	const server = new ApolloServer<IContext>({
 		typeDefs,
+		resolvers,
 		plugins: [
-			ApolloServerPluginLandingPageGraphQLPlayground({
-				settings: {
-					'editor.theme': 'dark',
-					'editor.cursorShape': 'line'
-				}
-			}),
-			// eslint-disable-next-line @typescript-eslint/no-var-requires
-			require('apollo-tracing').plugin()
+			ApolloServerPluginDrainHttpServer({ httpServer }),
+			ApolloServerPluginLandingPageLocalDefault({ footer: false })
 		]
 	});
 	await server.start();
-	server.applyMiddleware({ app, path: '/graphql' });
+	app.use(
+		'/graphql',
+		/*
+		 * Cors<cors.CorsRequest>(),
+		 * json(),
+		 */
+		expressMiddleware(server, {
+			context: ({ req }) => Promise.resolve(contextBuilder(req))
+		})
+	);
 
 	app.use('/', router);
 
