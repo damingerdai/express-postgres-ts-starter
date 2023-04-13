@@ -23,6 +23,7 @@ import {
 } from '@apollo/server/plugin/landingPage/default';
 import * as dotenv from 'dotenv';
 import http from 'http';
+import { Server } from 'socket.io';
 dotenv.config();
 
 import { middlewares } from './src/middlewares';
@@ -41,7 +42,8 @@ async function startServer() {
 	middlewares.forEach(mid => app.use(mid));
 
 	const httpServer = http.createServer(app);
-	const server = new ApolloServer<IContext>({
+
+	const apolloServer = new ApolloServer<IContext>({
 		typeDefs,
 		resolvers,
 		plugins: [
@@ -49,21 +51,37 @@ async function startServer() {
 			ApolloServerPluginLandingPageLocalDefault({ footer: false })
 		]
 	});
-	await server.start();
+
+	await apolloServer.start();
+
 	app.use(
 		'/graphql',
 		/*
 		 * Cors<cors.CorsRequest>(),
 		 * json(),
 		 */
-		expressMiddleware(server, {
+		expressMiddleware(apolloServer, {
 			context: ({ req }) => Promise.resolve(contextBuilder(req))
 		})
 	);
 
 	app.use('/', router);
+	app.get('/static/index.html', (req, res) => {
+		res.sendFile(__dirname + '/static/index.html');
+	});
 
-	app.listen(serverConfig.port, () => {
+	const io = new Server(httpServer);
+	io.on('connection', socket => {
+		console.log('a user connected');
+		socket.on('chat message', msg => {
+			io.emit('chat message', `hi, ${msg}`);
+		});
+		socket.on('disconnect', () => {
+			console.log('user disconnected');
+		});
+	});
+
+	httpServer.listen(serverConfig.port, () => {
 		logger.info(`The server has started on port ${serverConfig.port}`);
 	});
 }
