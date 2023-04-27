@@ -37,7 +37,7 @@ RUN mkdir -p /app
 
 WORKDIR /app
 COPY . /app
-COPY --from=build /app .
+COPY --from=build /app/ .
 
 # Define the url as the healthcheck
 HEALTHCHECK CMD curl --fail http://localhost:3000/ping || exit 1
