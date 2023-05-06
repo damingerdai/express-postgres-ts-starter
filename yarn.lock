@@ -6224,10 +6224,10 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-pg-boss@^8.4.2:
-  version "8.4.2"
-  resolved "https://registry.yarnpkg.com/pg-boss/-/pg-boss-8.4.2.tgz#4c300e3683e6acd7c157481544a49b8f565fe5e5"
-  integrity sha512-xcl/G8C7qlCyrcvlQvgLVBIe68zO0XfZc6K86/G9fq/mL+YQMEo1spW6lHqsPpNi2KGlpXwBEL/XZxkMa19eRA==
+pg-boss@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/pg-boss/-/pg-boss-9.0.0.tgz#ce21d034be8c4f064e2ee06de197bba66964b3f5"
+  integrity sha512-BT5ddbHjBzwbg1p0BIlU5ZGfQKZA0S5IX8ZCnu3FczTWsU0jzG43QWD7v+X4uzRBfVbI6icZOKcntIGg6H0OBg==
   dependencies:
     cron-parser "^4.0.0"
     delay "^5.0.0"
