@@ -37,7 +37,7 @@ import { initializePgBoss } from './src/service/pg-boss';
 
 async function startServer() {
 	const app = express();
-
+	app.set('trust proxy', 1);
 	const serverConfig = config.server;
 	middlewares.forEach(mid => app.use(mid));
 
