@@ -93,7 +93,7 @@
   "jest": "^27.0.3",
   "license-check-and-add": "^4.0.5",
   "lint-staged": "^13.2.1",
-  "prettier": "^2.8.7",
+  "prettier": "^2.8.8",
   "ts-jest": "^27.0.2",
   "ts-loader": "^9.4.2",
   "ts-node": "^10.8.1",
