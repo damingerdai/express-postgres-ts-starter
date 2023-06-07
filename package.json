@@ -4,7 +4,7 @@
  "description": "express-postgres-ts-starter",
  "main": "server.ts",
  "engines": {
-  "node": "^16.0.0 || ^18.0.0",
+  "node": "^16.0.0 || ^18.0.0 || ^20.0.0",
   "yarn": ">=1.22.4 <2",
   "npm": "Please use Yarn instead of NPM to install dependencies. See: https://yarnpkg.com/lang/en/docs/install/"
  },
@@ -62,7 +62,7 @@
   "knex": "^2.4.2",
   "lodash": "^4.17.21",
   "merge-graphql-schemas": "^1.7.8",
-  "minio": "^7.0.33",
+  "minio": "^7.1.1",
   "morgan": "^1.10.0",
   "pg": "^8.10.0",
   "pg-boss": "^9.0.1",
