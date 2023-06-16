@@ -13,80 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import JoiValidator from 'express-joi-validation';
-import ExpressRouter from 'express-promise-router';
+import { Router } from 'express';
+import { router as fileRouter } from './file';
+import { router as pingRouter } from './ping';
 
-import { File } from './file';
-import { Ping } from './ping';
-import { config } from '../config';
+export const apiRouter = Router();
 
-const expressRouter = ExpressRouter(config?.server?.router);
-
-export const routes = [Ping, File];
-
-routes.forEach(route => {
-	const schema = route?.schema;
-	const next = (req, res, nxt) => nxt();
-
-	const validateBody = schema?.body ? JoiValidator().body(schema.body) : next;
-	const validateParams = schema?.params
-		? JoiValidator().params(schema.params)
-		: next;
-	const validateQuery = schema?.query
-		? JoiValidator().query(schema.query)
-		: next;
-
-	switch (route.method) {
-	case 'GET':
-		expressRouter.get(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'POST':
-		expressRouter.post(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'PUT':
-		expressRouter.put(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'PATCH':
-		expressRouter.patch(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	case 'DELETE':
-		expressRouter.delete(
-			route.path,
-			validateBody,
-			validateParams,
-			validateQuery,
-			route.controller
-		);
-		break;
-	default:
-		throw new Error(
-			`Failed to load route. Invalid method: ${route.method} for path ${route.path}`
-		);
-	}
-});
-
-export const router = expressRouter;
+apiRouter.use('/file', fileRouter);
+apiRouter.use('/ping', pingRouter);

@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Router } from 'express';
-import * as controller from '../controller/ping';
 
-export const router: Router = Router();
+import { Request, Response } from 'express';
 
-router.all('/', controller.ping);
+export const ping = (req: Request, res: Response) => {
+	res.send('ping');
+};
