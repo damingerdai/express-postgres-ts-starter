@@ -69,7 +69,7 @@
   "pg-boss": "^9.0.1",
   "redis": "^4.6.7",
   "socket.io": "^4.6.2",
-  "winston": "^3.8.2"
+  "winston": "^3.9.0"
  },
  "devDependencies": {
   "@commitlint/cli": "^17.6.5",
