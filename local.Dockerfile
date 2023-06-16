@@ -20,7 +20,7 @@ RUN npm config set strict-ssl false
 RUN yarn config set strict-ssl false
 
 COPY package.json yarn.lock /tmp/
-RUN cd /tmp && yarn install
+RUN cd /tmp && yarn install && yarn add socket.io
 RUN mkdir -p /app && cp -a /tmp/node_modules /app/
 
 WORKDIR /app

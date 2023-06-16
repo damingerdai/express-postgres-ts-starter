@@ -27,7 +27,7 @@ import { Server } from 'socket.io';
 dotenv.config();
 
 import { middlewares } from './src/middlewares';
-import { router } from './src/routes';
+import { apiRouter } from './src/routes';
 import { config } from './src/config';
 import { IContext, contextBuilder } from './src/graphql/context';
 import { resolvers } from './src/graphql/resolvers';
@@ -65,7 +65,7 @@ async function startServer() {
 		})
 	);
 
-	app.use('/', router);
+	app.use('/', apiRouter);
 	app.get('/static/index.html', (req, res) => {
 		res.sendFile(__dirname + '/static/index.html');
 	});

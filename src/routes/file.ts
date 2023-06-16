@@ -13,26 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { Request, Response, Router } from 'express';
 import { UploadedFile } from 'express-fileupload';
 import { contextBuilder } from '../graphql/context';
-import { IRoute } from '../types/routes';
 
-export const File: IRoute = {
-	method: 'POST',
-	path: '/uploadImage',
-	controller: async (req, res) => {
-		if (!req.files || Object.keys(req.files).length === 0) {
-			res.status(400).json({
-				error: 'No files were uploaded'
-			});
+export const router: Router = Router();
 
-			return;
-		}
-		const context = contextBuilder(req);
-		const fileService = context.fileService;
-		const personedUrl = await fileService.uploadImage(
-			req.files.file as UploadedFile
-		);
-		res.status(200).json({ data: personedUrl });
+router.post('/uploadImage', async (req: Request, res: Response) => {
+	if (!req.files || Object.keys(req.files).length === 0) {
+		res.status(400).json({
+			error: 'No files were uploaded'
+		});
+
+		return;
 	}
-};
+	const context = contextBuilder(req);
+	const fileService = context.fileService;
+	const personedUrl = await fileService.uploadImage(
+		req.files.file as UploadedFile
+	);
+	res.status(200).json({ data: personedUrl });
+});
