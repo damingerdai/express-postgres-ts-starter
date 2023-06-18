@@ -1,6 +1,6 @@
 [
-  {
-    "name": "daming",
-    "age": 1
-  }
+ {
+  "username": "daming",
+  "password": "12345"
+ }
 ]

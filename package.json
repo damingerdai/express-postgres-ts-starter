@@ -29,7 +29,7 @@
   "seed:run:local": "cross-env POSTGRES_HOST=localhost ./node_modules/.bin/knex --knexfile db/knexfile.js seed:run",
   "start:dev": "ts-node-dev --require tsconfig-paths/register server.ts",
   "prettier": "prettier --check src/**/*.ts",
-  "eslint:ts": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+  "eslint:ts": "eslint . --ext .js,.jsx,.ts,.tsx",
   "lint": "yarn eslint:ts && yarn check:license",
   "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
   "version:patch": "yarn version --patch",
