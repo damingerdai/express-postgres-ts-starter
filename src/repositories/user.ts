@@ -13,11 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from '@graphql-tools/merge';
-import { resolvers as accessTokens } from './access-tokens';
-import { resolvers as ping } from './ping';
-import { resolvers as user } from './user';
+import { Knex } from 'knex';
+import { Knexer } from 'src/lib';
+import { IUser } from 'src/types/user';
 
-const resolversArr = [accessTokens, ping, user];
+export class UserRepository {
+	private knexer: Knexer<IUser & { createdAt: Date; updatedAt: Date }>;
 
-export const resolvers = mergeResolvers(resolversArr);
+	constructor(db: Knex) {
+		this.knexer = new Knexer(db, 'users');
+	}
+
+	public async create(username: string, password: string): Promise<IUser> {
+		const user = await this.knexer.create({
+			username: username,
+			password: password,
+			createdAt: new Date(),
+			updatedAt: new Date()
+		});
+
+		return user;
+	}
+}

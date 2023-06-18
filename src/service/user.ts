@@ -13,11 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from '@graphql-tools/merge';
-import { resolvers as accessTokens } from './access-tokens';
-import { resolvers as ping } from './ping';
-import { resolvers as user } from './user';
 
-const resolversArr = [accessTokens, ping, user];
+import { UserRepository } from 'src/repositories/user';
+import { ICreateUserInput, IUser } from 'src/types/user';
 
-export const resolvers = mergeResolvers(resolversArr);
+export class UserService {
+	constructor(private userRepository: UserRepository) {}
+
+	public createUser(user: ICreateUserInput): Promise<IUser> {
+		console.log(user);
+		return this.userRepository.create(user.username, user.password);
+	}
+}

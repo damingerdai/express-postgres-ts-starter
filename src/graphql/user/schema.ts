@@ -13,11 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from '@graphql-tools/merge';
-import { resolvers as accessTokens } from './access-tokens';
-import { resolvers as ping } from './ping';
-import { resolvers as user } from './user';
+import gql from 'graphql-tag';
 
-const resolversArr = [accessTokens, ping, user];
+export const typeDefs = gql`
+	type User {
+		id: String!
+		username: String!
+		password: String!
+	}
 
-export const resolvers = mergeResolvers(resolversArr);
+	input CreateUserInput {
+		username: String!
+		password: String!
+	}
+
+	type Mutation {
+		createUser(user: CreateUserInput): User
+	}
+`;

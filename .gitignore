@@ -118,3 +118,6 @@ dist
 
 # Other
 dist/
+
+# Macos
+.DS_Store

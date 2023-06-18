@@ -13,11 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from '@graphql-tools/merge';
-import { resolvers as accessTokens } from './access-tokens';
-import { resolvers as ping } from './ping';
-import { resolvers as user } from './user';
+import { IContext } from '../context';
 
-const resolversArr = [accessTokens, ping, user];
-
-export const resolvers = mergeResolvers(resolversArr);
+export const resolvers = {
+	Mutation: {
+		createUser: async (root, input, context: IContext) => {
+			try {
+				const { username, password } = input.user;
+				const { userService } = context;
+				const user = await userService.createUser({ username, password });
+				return user;
+			} catch (err) {
+				console.error(err);
+				throw err;
+			}
+		}
+	}
+};

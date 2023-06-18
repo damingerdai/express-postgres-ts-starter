@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeTypes } from 'merge-graphql-schemas';
+import { mergeTypeDefs, mergeResolvers } from '@graphql-tools/merge';
 import { typeDefs as accessTokens } from './access-tokens';
 import { typeDefs as ping } from './ping';
+import { typeDefs as user } from './user';
 
-const schemas = [accessTokens, ping];
+const schemas = [accessTokens, ping, user];
 
-export const typeDefs = mergeTypes(schemas, { all: true });
+export const typeDefs = mergeTypeDefs(schemas);

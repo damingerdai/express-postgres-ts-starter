@@ -19,9 +19,7 @@ import { PartialWithArray } from './util';
 
 const dbConfig: Knex.Config = Object.freeze(config.db) as Knex.Config;
 
-const knexInstance = knex(dbConfig);
-
-export const t = knexInstance('user');
+export const db = knex(dbConfig);
 
 export class Knexer<T> {
 	private db: Knex;

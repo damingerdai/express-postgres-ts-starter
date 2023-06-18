@@ -14,22 +14,23 @@
  * limitations under the License.
  */
 import { Request } from 'express';
-import { FileService, fileService } from '../service/file';
-import { RedisService } from '../service/redis';
+import { fileService, UserService } from '../service';
 import { redisService } from '../lib/redis';
+import { IRepositories, repositories } from 'src/repositories';
+import { IServices } from 'src/service';
+import { Knex } from 'knex';
 
-export interface IContext {
-	request: Request;
-
-	fileService: FileService;
-	redisService: RedisService;
-}
+export type IContext = IRepositories &
+	IServices & { request: Request; db: Knex };
 
 export const contextBuilder = (request: Request): IContext => {
+	const userService = new UserService(repositories.userRepository);
 	return {
 		request,
 
+		...repositories,
 		fileService,
-		redisService
+		redisService,
+		userService
 	};
 };

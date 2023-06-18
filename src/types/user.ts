@@ -13,11 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from '@graphql-tools/merge';
-import { resolvers as accessTokens } from './access-tokens';
-import { resolvers as ping } from './ping';
-import { resolvers as user } from './user';
 
-const resolversArr = [accessTokens, ping, user];
+export interface IUser {
+	id: string;
+	username: string;
+	password: string;
+}
 
-export const resolvers = mergeResolvers(resolversArr);
+export type Users = IUser[];
+
+export interface ICreateUserInput {
+	username: string;
+	password: string;
+}

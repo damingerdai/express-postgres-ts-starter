@@ -23,6 +23,8 @@ import {
 } from '@apollo/server/plugin/landingPage/default';
 import * as dotenv from 'dotenv';
 import http from 'http';
+import { json } from 'body-parser';
+import cors from 'cors';
 import { Server } from 'socket.io';
 dotenv.config();
 
@@ -56,10 +58,8 @@ async function startServer() {
 
 	app.use(
 		'/graphql',
-		/*
-		 * Cors<cors.CorsRequest>(),
-		 * json(),
-		 */
+		cors<cors.CorsRequest>(),
+		json(),
 		expressMiddleware(apolloServer, {
 			context: ({ req }) => Promise.resolve(contextBuilder(req))
 		})
@@ -81,8 +81,10 @@ async function startServer() {
 		});
 	});
 
+	await new Promise<void>(resolve => httpServer.listen({ port: serverConfig.port }, resolve)
+	);
 	httpServer.listen(serverConfig.port, () => {
-		logger.info(`The server has started on port ${serverConfig.port}`);
+		logger.info(`🚀 The server has started on port ${serverConfig.port}`);
 	});
 }
 

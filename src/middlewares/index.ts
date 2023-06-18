@@ -19,7 +19,10 @@ import fileUpload from 'express-fileupload';
 import session from 'express-session';
 import * as helmet from 'helmet';
 
-import { BodyParserMiddleware } from './body-parser';
+import {
+	BodyParserMiddleware,
+	BodyParserUrlencodedMiddleware
+} from './body-parser';
 import { Compression } from './compression';
 import { Morgan } from './morgan';
 
@@ -31,6 +34,7 @@ export type NextHandleFunction = (
 
 export const middlewares = [
 	BodyParserMiddleware,
+	BodyParserUrlencodedMiddleware,
 	cookieParser(),
 	Compression,
 	helmet.noSniff(),

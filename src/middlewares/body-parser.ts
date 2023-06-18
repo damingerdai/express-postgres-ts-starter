@@ -16,3 +16,6 @@
 import * as BodyParser from 'body-parser';
 
 export const BodyParserMiddleware = BodyParser.json();
+export const BodyParserUrlencodedMiddleware = BodyParser.urlencoded({
+	extended: true
+});

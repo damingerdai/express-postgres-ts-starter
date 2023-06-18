@@ -13,11 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeResolvers } from '@graphql-tools/merge';
-import { resolvers as accessTokens } from './access-tokens';
-import { resolvers as ping } from './ping';
-import { resolvers as user } from './user';
 
-const resolversArr = [accessTokens, ping, user];
+import { Knex } from 'knex';
+import { UserRepository } from './user';
+import { db } from '../lib/knexer';
 
-export const resolvers = mergeResolvers(resolversArr);
+type IConstructable<T> = new (...args: any[]) => T;
+
+export interface IRepositories {
+	db: Knex;
+	UserRepository: IConstructable<UserRepository>;
+
+	userRepository: UserRepository;
+}
+
+export const repositoryClass = {
+	UserRepository
+};
+
+export const newRepositoriesWithDb = (repoDB: Knex) => {
+	return {
+		db: repoDB,
+
+		userRepository: new UserRepository(repoDB)
+	};
+};
+
+export const repositories: IRepositories = {
+	db,
+	...repositoryClass,
+	...newRepositoriesWithDb(db)
+};
