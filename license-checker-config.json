@@ -20,7 +20,8 @@
   "**/.prettierrc",
   "**/.prettierignore",
   "**/OWNERS",
-  "**/*.lock"
+  "**/*.lock",
+  "**/.DS_Store"
  ],
  "license": "license-header.txt",
  "defaultFormat": {
