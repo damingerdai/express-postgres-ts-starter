@@ -21,7 +21,6 @@ export class UserService {
 	constructor(private userRepository: UserRepository) {}
 
 	public createUser(user: ICreateUserInput): Promise<IUser> {
-		console.log(user);
 		return this.userRepository.create(user.username, user.password);
 	}
 }
