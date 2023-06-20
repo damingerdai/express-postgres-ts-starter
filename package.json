@@ -86,7 +86,7 @@
   "conventional-changelog-cli": "^3.0.0",
   "cross-env": "^7.0.3",
   "esbuild": "^0.18.4",
-  "eslint": "^7.19.0",
+  "eslint": "^8.0.0",
   "eslint-config-prettier": "^8.8.0",
   "husky": "^8.0.3",
   "is-ci": "^3.0.1",
