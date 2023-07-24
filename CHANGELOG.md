@@ -1,3 +1,31 @@
+# [0.4.0](https://github.com/damingerdai/express-postgres-ts-starter/compare/v0.3.0...v0.4.0) (2023-07-24)
+
+### Bug Fixes
+
+- **deps:** update dependency @apollo/server to v4.8.0 ([#445](https://github.com/damingerdai/express-postgres-ts-starter/issues/445)) ([e6f5106](https://github.com/damingerdai/express-postgres-ts-starter/commit/e6f510614f2708e44c55fc9ec9a8ebafc7ed2ae1))
+- **deps:** update dependency @apollo/server to v4.8.1 ([#448](https://github.com/damingerdai/express-postgres-ts-starter/issues/448)) ([20ad3b2](https://github.com/damingerdai/express-postgres-ts-starter/commit/20ad3b232de98d5c325c4fa20309ef49d7efd071))
+- **deps:** update dependency graphql to v16.7.1 ([#411](https://github.com/damingerdai/express-postgres-ts-starter/issues/411)) ([f3a1ad4](https://github.com/damingerdai/express-postgres-ts-starter/commit/f3a1ad441d1d237f13f0faddab8637e786fd1ee8))
+- **deps:** update dependency jsonwebtoken to v9.0.1 ([#429](https://github.com/damingerdai/express-postgres-ts-starter/issues/429)) ([621fb73](https://github.com/damingerdai/express-postgres-ts-starter/commit/621fb7362ccf986cba029cb8bebe628b93b1b480))
+- **deps:** update dependency knex to v2.5.0 ([#431](https://github.com/damingerdai/express-postgres-ts-starter/issues/431)) ([73d1d81](https://github.com/damingerdai/express-postgres-ts-starter/commit/73d1d81a0c1d2edd8cc53e217c7e7ab8995ebaa3))
+- **deps:** update dependency knex to v2.5.1 ([#439](https://github.com/damingerdai/express-postgres-ts-starter/issues/439)) ([2adde42](https://github.com/damingerdai/express-postgres-ts-starter/commit/2adde429d0b143a59b6498d0511cd236891df3d4))
+- **deps:** update dependency winston to v3.10.0 ([#434](https://github.com/damingerdai/express-postgres-ts-starter/issues/434)) ([f92d567](https://github.com/damingerdai/express-postgres-ts-starter/commit/f92d56791fd672c9b117239ef24cd61feadd72f9))
+
+### Features
+
+- add accesstoken support ([#248](https://github.com/damingerdai/express-postgres-ts-starter/issues/248)) ([8ecda8a](https://github.com/damingerdai/express-postgres-ts-starter/commit/8ecda8a69f5f8afcbda135b2e643dcde834f958d))
+- add docker-compose development ([5404aa7](https://github.com/damingerdai/express-postgres-ts-starter/commit/5404aa7852e5639951d9d57e67c3b57e844d64c9))
+- add exceljs support ([#377](https://github.com/damingerdai/express-postgres-ts-starter/issues/377)) ([1fd49db](https://github.com/damingerdai/express-postgres-ts-starter/commit/1fd49dbc817673d432f45a20939291e1c1dd9c8b))
+- add NextHandleFunction type ([6678a5b](https://github.com/damingerdai/express-postgres-ts-starter/commit/6678a5b9d56e21350e5e927ffe26bfa7788e38ea))
+- add pg-boss support ([#309](https://github.com/damingerdai/express-postgres-ts-starter/issues/309)) ([45af506](https://github.com/damingerdai/express-postgres-ts-starter/commit/45af5060c980f8f1d021d8208885549918fcd8a7))
+- add session middleware ([#361](https://github.com/damingerdai/express-postgres-ts-starter/issues/361)) ([5121912](https://github.com/damingerdai/express-postgres-ts-starter/commit/51219127a21f6ec11a18ae6adf553bd5eaeaa60d))
+- add socket io support ([#331](https://github.com/damingerdai/express-postgres-ts-starter/issues/331)) ([9eb2c90](https://github.com/damingerdai/express-postgres-ts-starter/commit/9eb2c90b0822d257d00e84e5b7e45aba738c3faa))
+- bump @apollo/server v4 ([#321](https://github.com/damingerdai/express-postgres-ts-starter/issues/321)) ([3e5e093](https://github.com/damingerdai/express-postgres-ts-starter/commit/3e5e09313fcdf300f39c9ddb005969c689ea2f80))
+- **graphql:** add create user graohql feature ([413e31e](https://github.com/damingerdai/express-postgres-ts-starter/commit/413e31e3b52a1ccac51eb87c7973f45bb6467cf0))
+
+### Reverts
+
+- Revert "chore(deps): update dependency trim-newlines to v5 (#402)" (#450) ([9d75c8b](https://github.com/damingerdai/express-postgres-ts-starter/commit/9d75c8be030ceb4b0e8ed4a4e06734200176c0fb)), closes [#402](https://github.com/damingerdai/express-postgres-ts-starter/issues/402) [#450](https://github.com/damingerdai/express-postgres-ts-starter/issues/450)
+
 # [0.3.0](https://github.com/damingerdai/express-postgres-ts-starter/compare/v0.2.0...v0.3.0) (2022-10-24)
 
 ### Bug Fixes
