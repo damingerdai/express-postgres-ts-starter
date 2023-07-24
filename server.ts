@@ -83,9 +83,7 @@ async function startServer() {
 
 	await new Promise<void>(resolve => httpServer.listen({ port: serverConfig.port }, resolve)
 	);
-	httpServer.listen(serverConfig.port, () => {
-		logger.info(`🚀 The server has started on port ${serverConfig.port}`);
-	});
+	logger.info(`🚀 The server has started on port ${serverConfig.port}`);
 }
 
 /* istanbul ignore if: main scope */

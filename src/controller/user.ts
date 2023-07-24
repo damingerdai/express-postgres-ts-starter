@@ -13,13 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Router } from 'express';
-import { router as fileRouter } from './file';
-import { router as pingRouter } from './ping';
-import { router as userRouter } from './user';
 
-export const apiRouter = Router();
+import { Request, Response } from 'express';
+import { contextBuilder } from 'src/graphql/context';
+import { ICreateUserInput } from 'src/types/user';
 
-apiRouter.use('/file', fileRouter);
-apiRouter.use('/ping', pingRouter);
-apiRouter.use('/user', userRouter);
+export const create = async (req: Request, res: Response) => {
+	const context = contextBuilder(req);
+	const userService = context.userService;
+	const input = req.body as ICreateUserInput;
+	const result = await userService.createUser(input);
+	res.status(200).json({
+		success: true,
+		data: result
+	});
+};

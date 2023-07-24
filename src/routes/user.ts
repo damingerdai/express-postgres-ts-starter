@@ -14,12 +14,8 @@
  * limitations under the License.
  */
 import { Router } from 'express';
-import { router as fileRouter } from './file';
-import { router as pingRouter } from './ping';
-import { router as userRouter } from './user';
+import * as controller from '../controller/user';
 
-export const apiRouter = Router();
+export const router = Router();
 
-apiRouter.use('/file', fileRouter);
-apiRouter.use('/ping', pingRouter);
-apiRouter.use('/user', userRouter);
+router.post('/', controller.create);
