@@ -16,10 +16,10 @@
 'use strict';
 
 /* eslint-disable @typescript-eslint/no-var-requires, camelcase */
-const users = require('./data/users.json');
+const roles = require('./data/roles.json');
 
 exports.seed = async knex => {
-	await knex('users').insert(
-		users.map(user => ({ ...user, updated_at: new Date() }))
+	await knex('roles').insert(
+		roles.map(role => ({ ...role, updated_at: new Date() }))
 	);
 };
