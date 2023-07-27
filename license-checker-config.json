@@ -21,7 +21,8 @@
   "**/.prettierignore",
   "**/OWNERS",
   "**/*.lock",
-  "**/.DS_Store"
+  "**/.DS_Store",
+  "**/*.patch"
  ],
  "license": "license-header.txt",
  "defaultFormat": {

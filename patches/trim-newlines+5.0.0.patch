@@ -1,0 +1,102 @@
+diff --git a/node_modules/trim-newlines/index.cjs b/node_modules/trim-newlines/index.cjs
+new file mode 100644
+index 0000000..2e272db
+--- /dev/null
++++ b/node_modules/trim-newlines/index.cjs
+@@ -0,0 +1,69 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.trimNewlinesEnd = exports.trimNewlinesStart = exports.trimNewlines = void 0;
++/**
++Trim from the start and end of a string.
++
++@example
++```js
++import {trimNewlines} from 'trim-newlines';
++
++trimNewlines('\n🦄\n🦄\r\n');
++//=> '🦄\n🦄'
++```
++*/
++function trimNewlines(str) {
++    let start = 0;
++    let end = str.length;
++    while (start < end && (str[start] === "\r" || str[start] === "\n")) {
++        start++;
++    }
++    while (end > start && (str[end - 1] === "\r" || str[end - 1] === "\n")) {
++        end--;
++    }
++    return (start > 0 || end < str.length ? str.slice(start, end) : str);
++}
++exports.trimNewlines = trimNewlines;
++/**
++Trim from the start of a string.
++
++@example
++```js
++import {trimNewlinesStart} from 'trim-newlines';
++
++trimNewlinesStart('\n🦄\r\n');
++//=> '🦄\r\n'
++```
++*/
++function trimNewlinesStart(str) {
++    const end = str.length;
++    let start = 0;
++    while (start < end && (str[start] === "\r" || str[start] === "\n")) {
++        start++;
++    }
++    return (start > 0 ? str.slice(start, end) : str);
++}
++exports.trimNewlinesStart = trimNewlinesStart;
++/**
++Trim from the end of a string.
++
++@example
++```js
++import {trimNewlinesEnd} from 'trim-newlines';
++
++trimNewlinesEnd('\n🦄\r\n');
++//=> '\n🦄'
++```
++*/
++function trimNewlinesEnd(str) {
++    let end = str.length;
++    while (end > 0 && (str[end - 1] === "\r" || str[end - 1] === "\n")) {
++        end--;
++    }
++    return (end < str.length ? str.slice(0, end) : str);
++}
++exports.trimNewlinesEnd = trimNewlinesEnd;
++
++module.exports = string => string.replace(/^[\r\n]+/, '').replace(/[\r\n]+$/, '');
++module.exports.start = string => string.replace(/^[\r\n]+/, '');
++module.exports.end = string => string.replace(/[\r\n]+$/, '');
+diff --git a/node_modules/trim-newlines/index.js b/node_modules/trim-newlines/index.mjs
+similarity index 100%
+rename from node_modules/trim-newlines/index.js
+rename to node_modules/trim-newlines/index.mjs
+diff --git a/node_modules/trim-newlines/package.json b/node_modules/trim-newlines/package.json
+index ca378c7..d57e05c 100644
+--- a/node_modules/trim-newlines/package.json
++++ b/node_modules/trim-newlines/package.json
+@@ -3,6 +3,9 @@
+ 	"version": "5.0.0",
+ 	"description": "Trim newlines from the start and/or end of a string",
+ 	"license": "MIT",
++  "main": "index.cjs",
++  "module": "index.mjs",
++  "typings": "index.d.ts",
+ 	"repository": "sindresorhus/trim-newlines",
+ 	"funding": "https://github.com/sponsors/sindresorhus",
+ 	"author": {
+@@ -10,8 +13,6 @@
+ 		"email": "sindresorhus@gmail.com",
+ 		"url": "https://sindresorhus.com"
+ 	},
+-	"type": "module",
+-	"exports": "./index.js",
+ 	"engines": {
+ 		"node": ">=14.16"
+ 	},
