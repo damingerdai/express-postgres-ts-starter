@@ -34,7 +34,8 @@
   "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
   "version:patch": "yarn version --patch",
   "version:minor": "yarn version --minor",
-  "prepare": "is-ci || husky install"
+  "prepare": "is-ci || husky install",
+  "postinstall": "patch-package"
  },
  "keywords": [
   "express",
@@ -93,6 +94,7 @@
   "jest": "^29.5.0",
   "license-check-and-add": "^4.0.5",
   "lint-staged": "^13.2.2",
+  "patch-package": "^7.0.2",
   "prettier": "^3.0.0",
   "ts-jest": "^29.1.0",
   "ts-loader": "^9.4.2",
@@ -108,6 +110,6 @@
  "resolutions": {
   "**/**/glob-parent": ">=5.1.2",
   "**/**/ws": ">=5.2.3 <6.0.0 || >=6.2.2 <7.0.0 || >=7.4.6",
-  "**/**/trim-newlines": ">=3.0.1 <4.0.0"
+  "**/**/trim-newlines": ">=3.0.1 <6.0.0"
  }
 }
