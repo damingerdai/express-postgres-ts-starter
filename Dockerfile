@@ -30,7 +30,7 @@ RUN yarn build
 
 FROM build AS ci
 WORKDIR /app
-RUN yarn run test:ci && yarn install --frozen-lockfile --non-interactive --production
+RUN yarn run test:ci && yarn install --frozen-lockfile --non-interactive --production --ignore-scripts
 
 
 FROM node:20.5.0-alpine3.18 as release
