@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 import { Request } from 'express';
-import { fileService, UserService } from '../service';
+import { fileService, IServices, UserService } from '../service';
 import { redisService } from '../lib/redis';
-import { IRepositories, repositories } from 'src/repositories';
-import { IServices } from 'src/service';
+import { IRepositories, repositories } from '../repositories';
 import { Knex } from 'knex';
 
 export type IContext = IRepositories &

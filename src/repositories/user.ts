@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 import { Knex } from 'knex';
-import { Knexer } from 'src/lib';
-import { IUser } from 'src/types/user';
+import { Knexer } from '../lib';
+import { IUser } from '../types/user';
 
 export class UserRepository {
 	private knexer: Knexer<IUser & { createdAt: Date; updatedAt: Date }>;

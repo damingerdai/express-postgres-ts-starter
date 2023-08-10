@@ -15,8 +15,8 @@
  */
 
 import { Request, Response } from 'express';
-import { contextBuilder } from 'src/graphql/context';
-import { ICreateUserInput } from 'src/types/user';
+import { contextBuilder } from '../graphql/context';
+import { ICreateUserInput } from '../types/user';
 
 export const create = async (req: Request, res: Response) => {
 	const context = contextBuilder(req);

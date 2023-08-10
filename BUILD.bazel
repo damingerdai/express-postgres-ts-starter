@@ -1,0 +1,64 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+
+exports_files(["tsconfig.json"])
+
+SRCS = glob(
+	[
+		"src/**/*.ts",
+	],
+	exclude = [
+		"src/**/*.spec.ts"
+	]
+)
+
+ts_project(
+  name = "server-ts",
+  srcs = ["server.ts" ] + SRCS,
+	resolve_json_module = True,
+	source_map = True,
+  tsconfig = "//:tsconfig.json",
+  visibility = ["//visibility:public"],
+	deps = [
+		"@npm//@apollo/server",
+		"@npm//@graphql-tools/merge",
+		"@npm//body-parser",
+		"@npm//compression",
+		"@npm//cookie-parser",
+		"@npm//dotenv",
+		"@npm//exceljs",
+		"@npm//express",
+		"@npm//express-fileupload",
+		"@npm//express-joi-validation",
+		"@npm//express-session",
+		"@npm//graphql",
+		"@npm//graphql-tag",
+		"@npm//helmet",
+		"@npm//joi",
+		"@npm//jsonwebtoken",
+		"@npm//knex",
+		"@npm//lodash",
+		"@npm//minio",
+		"@npm//morgan",
+		"@npm//pg",
+		"@npm//pg-boss",
+		"@npm//redis",
+		"@npm//socket.io",
+		"@npm//winston",
+
+		"@npm//@types/express",
+		"@npm//@types/express-fileupload",
+		"@npm//@types/express-session",
+		"@npm//@types/jest",
+    "@npm//@types/node",
+	]
+)
+
+nodejs_binary(
+	name = "server",
+	data = [":server-ts"],
+	entry_point = ":server.ts",
+)
+
