@@ -1,5 +1,9 @@
 {
  "ignore": [
+  ".bazelignore",
+  ".bazelrc",
+  ".bazelrc.user",
+  ".bazelversion",
   ".env",
   ".eslintignore",
   ".git",
@@ -22,7 +26,10 @@
   "**/OWNERS",
   "**/*.lock",
   "**/.DS_Store",
-  "**/*.patch"
+  "**/*.patch",
+  "**/*.bazel",
+  "**/*.bzl",
+  "WORKSPACE"
  ],
  "license": "license-header.txt",
  "defaultFormat": {
