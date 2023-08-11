@@ -121,3 +121,6 @@ dist/
 
 # Macos
 .DS_Store
+
+# Bazel
+.bazelrc.user

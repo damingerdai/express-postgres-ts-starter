@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import { UserRepository } from 'src/repositories/user';
-import { ICreateUserInput, IUser } from 'src/types/user';
+import { UserRepository } from '../repositories/user';
+import { ICreateUserInput, IUser } from '../types/user';
 
 export class UserService {
 	constructor(private userRepository: UserRepository) {}

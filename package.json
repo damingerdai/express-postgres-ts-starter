@@ -12,6 +12,7 @@
   "tsc": "tsc",
   "build": "webpack",
   "build:watch": "webpack --watch",
+  "build:bazel": "bazel build //:server",
   "esbuild": "./node_modules/.bin/esbuild server.ts --bundle --outfile=dist/esbuild/server.js --platform=node --target=node14.15.3",
   "test": "jest --runInBand --detectOpenHandles --forceExit",
   "test:ci": "jest --runInBand --detectOpenHandles --forceExit --coverage",
@@ -72,6 +73,10 @@
   "winston": "^3.9.0"
  },
  "devDependencies": {
+  "@bazel/bazelisk": "^1.7.5",
+  "@bazel/buildifier": "^6.0.0",
+  "@bazel/ibazel": "^0.16.0",
+  "@bazel/typescript": "^5.8.1",
   "@commitlint/cli": "^17.6.5",
   "@commitlint/config-conventional": "^17.6.5",
   "@types/express": "^4.17.17",
