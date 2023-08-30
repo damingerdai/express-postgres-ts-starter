@@ -46,7 +46,7 @@
  "author": "arthur ming",
  "license": "Apache-2.0",
  "dependencies": {
-  "@apollo/server": "^4.7.4",
+  "@apollo/server": "^4.9.3",
   "@graphql-tools/merge": "^9.0.0",
   "body-parser": "^1.20.2",
   "compression": "^1.7.4",
