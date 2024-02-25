@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import winston, { createLogger, format, transports } from 'winston';
+import { convertUTCTimeToTimezone } from './date';
 
 const { combine, timestamp, printf, colorize, json } = format;
 
@@ -41,26 +42,30 @@ export const localFormatter = (
 		timestamp(),
 		colorize(),
 		printf(msg => {
+			const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 			const { timestamp, level, message, ...logObject } = msg;
+			const timestampWithTimezone = convertUTCTimeToTimezone(timestamp, timeZone);
 			const { label: appLabel, ...defaultRest } = defaultLabels;
-			return `[${level}] ${timestamp} ${appLabel}: ${message} ${
+			return `[${level}] ${timestamp}(${timestampWithTimezone}) ${appLabel}: ${message} ${
 				logObject ? JSON.stringify({ ...logObject, ...defaultRest }, null, 2) : ''
 			}`;
 		})
 	);
 };
 
+const formatter = isProduction ? lokiFormatter : localFormatter;
+
 const defaultLogger = isProduction
 	? createLogger({
 		level: 'info',
-		format: lokiFormatter({
+		format: formatter({
 			label: APP_LABEL
 		}),
 		transports: [new transports.Console()]
 	  })
 	: createLogger({
 		level: 'debug',
-		format: localFormatter({ label: APP_LABEL }),
+		format: formatter({ label: APP_LABEL }),
 		transports: [new transports.Console()]
 	  });
 
