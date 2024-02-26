@@ -15,11 +15,14 @@
  */
 import winston, { createLogger, format, transports } from 'winston';
 import { convertUTCTimeToTimezone } from './date';
+import { config } from '../config';
 
 const { combine, timestamp, printf, colorize, json } = format;
 
-const APP_LABEL = process.env.APP_LABEL ?? 'express-postgres-ts-starter';
-const isProduction = process.env.NODE_ENV === 'production';
+const { server: serverConfig } = config;
+
+const APP_LABEL = serverConfig.name;
+const isProduction = serverConfig.isProduction;
 
 interface DefaultLogProps {
 	label: string;
@@ -35,7 +38,7 @@ const lokiFormatter = (
 	);
 };
 
-export const localFormatter = (
+const localFormatter = (
 	defaultLabels: DefaultLogProps
 ): winston.Logform.Format => {
 	return combine(
@@ -55,18 +58,8 @@ export const localFormatter = (
 
 const formatter = isProduction ? lokiFormatter : localFormatter;
 
-const defaultLogger = isProduction
-	? createLogger({
-		level: 'info',
-		format: formatter({
-			label: APP_LABEL
-		}),
-		transports: [new transports.Console()]
-	  })
-	: createLogger({
-		level: 'debug',
-		format: formatter({ label: APP_LABEL }),
-		transports: [new transports.Console()]
-	  });
-
-export const logger = defaultLogger;
+export const logger = createLogger({
+	level: 'info',
+	format: formatter({ label: APP_LABEL }),
+	transports: [new transports.Console()]
+});

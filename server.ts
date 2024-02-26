@@ -21,12 +21,11 @@ import {
 	ApolloServerPluginLandingPageLocalDefault,
 	ApolloServerPluginLandingPageProductionDefault
 } from '@apollo/server/plugin/landingPage/default';
-import * as dotenv from 'dotenv';
+import 'dotenv/config';
 import http from 'http';
 import { json } from 'body-parser';
 import cors from 'cors';
 import { Server } from 'socket.io';
-dotenv.config();
 
 import { middlewares } from './src/middlewares';
 import { apiRouter } from './src/routes';
@@ -72,12 +71,12 @@ async function startServer() {
 
 	const io = new Server(httpServer);
 	io.on('connection', socket => {
-		console.log('a user connected');
+		logger.info('a user connected');
 		socket.on('chat message', msg => {
 			io.emit('chat message', `hi, ${msg}`);
 		});
 		socket.on('disconnect', () => {
-			console.log('user disconnected');
+			logger.info('user disconnected');
 		});
 	});
 

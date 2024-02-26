@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { camelCase, snakeCase } from './lib/change-case';
+import { camelCase, snakeCase } from '../lib/change-case';
 
 const specialChars = ['*'];
 
@@ -50,6 +50,7 @@ export const config = {
 		wrapIdentifier: (value, origImpl, queryContext) => origImpl(convertToCase(value, snakeCase))
 	},
 	server: {
+		name: process.env.APP_LABEL ?? 'express-postgres-ts-starter',
 		port: process.env.APP_PORT || 3000,
 		router: {
 			caseSensitive: false,
