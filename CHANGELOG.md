@@ -1,3 +1,19 @@
+## [0.4.1](https://github.com/damingerdai/express-postgres-ts-starter/compare/v0.4.0...v0.4.1) (2024-02-26)
+
+### Bug Fixes
+
+- **deps:** update dependency @apollo/server to v4.9.2 ([#472](https://github.com/damingerdai/express-postgres-ts-starter/issues/472)) ([39cfe86](https://github.com/damingerdai/express-postgres-ts-starter/commit/39cfe8630ada218c11dbb9d841ed0640dcb7dc06))
+- **deps:** update dependency @apollo/server to v4.9.3 [security] ([#476](https://github.com/damingerdai/express-postgres-ts-starter/issues/476)) ([25b084c](https://github.com/damingerdai/express-postgres-ts-starter/commit/25b084c470410fc0eaac8a3647943658ed581da8))
+- **deps:** update dependency pg to v8.11.3 ([#460](https://github.com/damingerdai/express-postgres-ts-starter/issues/460)) ([5b3266c](https://github.com/damingerdai/express-postgres-ts-starter/commit/5b3266c044b66397d532de3900701da5717b8c8b))
+
+### Features
+
+- add bazel support ([#462](https://github.com/damingerdai/express-postgres-ts-starter/issues/462)) ([7c80f92](https://github.com/damingerdai/express-postgres-ts-starter/commit/7c80f92184fab03c808925fdb58756a52e392b1f))
+- add create user restfull api ([9678059](https://github.com/damingerdai/express-postgres-ts-starter/commit/9678059d390e776e4a6815b5d689b81bf23908c6))
+- add crypto common utils ([#454](https://github.com/damingerdai/express-postgres-ts-starter/issues/454)) ([0891c4f](https://github.com/damingerdai/express-postgres-ts-starter/commit/0891c4fb6bd1375d11c2ada3cd41664ed63a9a53))
+- **db:** add role migration and seed scripts ([d4a9c07](https://github.com/damingerdai/express-postgres-ts-starter/commit/d4a9c07c79c763d38a597bd7698b68dba89031c3))
+- show local timezone date format in logger ([5fb737a](https://github.com/damingerdai/express-postgres-ts-starter/commit/5fb737a64dc8327ee1e8d1be61bbeebf2472cf1d))
+
 # [0.4.0](https://github.com/damingerdai/express-postgres-ts-starter/compare/v0.3.0...v0.4.0) (2023-07-24)
 
 ### Bug Fixes
