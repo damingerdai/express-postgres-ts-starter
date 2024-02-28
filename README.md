@@ -10,7 +10,7 @@ This project needs to install the following software:
 2. [Node](https://nodejs.org/)
 3. [Yarn](https://classic.yarnpkg.com/lang/en/)
 
-> Note: node >= 16.0.0
+> Note: node >= 18.0.0
 
 ### Set up
 
