@@ -1,0 +1,20 @@
+{
+ "verbose": false,
+ "debug": false,
+ "exec": "ts-node -r dotenv/config server.ts",
+ "ignore": [
+  "node_modules",
+  "./test",
+  "**/*.d.ts",
+  "*.test.ts",
+  "*.spec.ts",
+  "test/**/*",
+  "docs/*"
+ ],
+ "events": {
+  "restart": ""
+ },
+ "watch": ["./src", "server.ts", ".env"],
+ "ext": "ts tsx",
+ "inspect": true
+}
