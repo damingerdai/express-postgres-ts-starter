@@ -31,7 +31,7 @@ services:
   ports:
    - 3000:3000
   networks:
-   - daming-network
+   - daming-epts-network
   logging:
    options:
     max-size: '10m'
@@ -42,14 +42,14 @@ services:
   ports:
    - 5432:5432
   volumes:
-   - daming-volume:/var/lib/postgresql/data
+   - daming-epts-volume:/var/lib/postgresql/data
    # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
   environment:
    POSTGRES_USER: postgres
    POSTGRES_DB: postgres
    POSTGRES_PASSWORD: 12345
   networks:
-   - daming-network
+   - daming-epts-network
  minio:
   image: minio/minio:RELEASE.2023-03-24T21-41-23Z
   ports:
@@ -69,18 +69,18 @@ services:
    retries: 3
   restart: on-failure
   networks:
-   - daming-network
+   - daming-epts-network
  redis:
   image: redis:7.0.12-alpine3.18
   ports:
    - 6379:6379
   networks:
-   - daming-network
+   - daming-epts-network
   volumes:
    - daming-redis-volume:/data/redis
 
 volumes:
- daming-volume:
+ daming-epts-volume:
   external: true
  daming-minio-volume:
   external: true
@@ -88,5 +88,5 @@ volumes:
   external: true
 
 networks:
- daming-network:
+ daming-epts-network:
   external: true

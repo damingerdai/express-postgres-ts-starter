@@ -17,8 +17,8 @@ This project needs to install the following software:
 use Docker create a postgres database
 
 ```
-docker network create daming-network
-docker volume create --name=daming-volume
+docker network create daming-epts-network
+docker volume create --name=daming-epts-volume
 docker volume create --name=daming-minio-volume
 docker volume create --name=daming-redis-volume
 docker compose up db
@@ -49,8 +49,8 @@ Now open the link [http://127.0.0.1:3000/graphql](http://127.0.0.1:3000/graphql)
 
 ```shell
 ## set up Docker environment
-docker network create daming-network
-docker volume create --name=daming-volume
+docker network create daming-epts-network
+docker volume create --name=daming-epts-volume
 docker volume create --name=daming-minio-volume
 docker volume create --name=daming-redis-volume
 
