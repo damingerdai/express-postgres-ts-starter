@@ -16,10 +16,12 @@
 import { RedisClientType } from 'redis';
 
 export class RedisService {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	constructor(private redisClient: RedisClientType<any>) {
 		this.redisClient = redisClient;
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	public on(event: string | symbol, listener: (...args: any[]) => void): void {
 		this.redisClient.on(event, listener);
 	}
