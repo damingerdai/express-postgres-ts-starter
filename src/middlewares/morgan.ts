@@ -13,9 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { Request } from 'express';
 import morgan from 'morgan';
 import { config } from '../config';
 
 export const Morgan = morgan('dev', {
-	skip: () => config.server.isProduction
+	skip: (req: Request) => req.originalUrl === '/graphql' || config.server.isProduction
 });
