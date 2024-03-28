@@ -40,11 +40,11 @@ http_archive(
 #       breaks our usage of managed_directories
 http_archive(
     name = "aspect_bazel_lib",
-    sha256 = "44f4f6d1ea1fc5a79ed6ca83f875038fee0a0c47db4f9c9beed097e56f8fad03",
-    strip_prefix = "bazel-lib-1.34.0",
+    sha256 = "9203666a097a750787157f9f422a739b31255efaf4c5e4e462ad14271c5d309e",
+    strip_prefix = "bazel-lib-1.42.1",
     urls = [
-			"https://github.com/aspect-build/bazel-lib/archive/refs/tags/v1.34.0.tar.gz",
-			"https://ghproxy.com/https://github.com/aspect-build/bazel-lib/archive/refs/tags/v1.34.0.tar.gz",
+			"https://github.com/aspect-build/bazel-lib/archive/refs/tags/v1.42.1.tar.gz",
+			"https://ghproxy.com/https://github.com/aspect-build/bazel-lib/archive/refs/tags/v1.42.1.tar.gz",
 		]
 )
 
