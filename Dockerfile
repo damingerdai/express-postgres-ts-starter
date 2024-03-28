@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM node:20.10.0-alpine3.19 as build
+FROM node:20.12.0-alpine3.19 as build
 
 ENV SELF_SIGNED_CERT_IN_CHAIN=true
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -33,7 +33,7 @@ WORKDIR /app
 RUN yarn run test:ci && yarn install --frozen-lockfile --non-interactive --production --ignore-scripts
 
 
-FROM node:20.10.0-alpine3.19 as release
+FROM node:20.12.0-alpine3.19 as release
 
 ENV SELF_SIGNED_CERT_IN_CHAIN=true
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
