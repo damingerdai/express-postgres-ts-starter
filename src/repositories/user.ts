@@ -34,4 +34,10 @@ export class UserRepository {
 
 		return user;
 	}
+
+	public async get(id: string): Promise<IUser> {
+		const user = await this.knexer.findOne({ id: id });
+
+		return user;
+	}
 }

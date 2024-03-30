@@ -23,4 +23,8 @@ export class UserService {
 	public createUser(user: ICreateUserInput): Promise<IUser> {
 		return this.userRepository.create(user.username, user.password);
 	}
+
+	public getUser(id: string): Promise<IUser> {
+		return this.userRepository.get(id);
+	}
 }

@@ -20,9 +20,20 @@ import { ICreateUserInput } from '../types/user';
 
 export const create = async (req: Request, res: Response) => {
 	const context = contextBuilder(req);
-	const userService = context.userService;
+	const { userService } = context;
 	const input = req.body as ICreateUserInput;
 	const result = await userService.createUser(input);
+	res.status(200).json({
+		success: true,
+		data: result
+	});
+};
+
+export const get = async (req: Request, res: Response) => {
+	const context = contextBuilder(req);
+	const { userService } = context;
+	const id = req.params.id;
+	const result = await userService.getUser(id);
 	res.status(200).json({
 		success: true,
 		data: result

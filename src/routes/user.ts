@@ -19,3 +19,4 @@ import * as controller from '../controller/user';
 export const router = Router();
 
 router.post('/', controller.create);
+router.get('/:id', controller.create);

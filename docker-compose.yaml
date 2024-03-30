@@ -47,7 +47,8 @@ services:
   environment:
    POSTGRES_USER: postgres
    POSTGRES_DB: postgres
-   POSTGRES_PASSWORD: 12345
+   POSTGRES_PASSWORD: 123456
+   POSTGRES_HOST_AUTH_METHOD: scram-sha-256
   networks:
    - daming-epts-network
  minio:
