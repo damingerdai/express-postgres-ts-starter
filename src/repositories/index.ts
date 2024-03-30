@@ -18,7 +18,7 @@ import { Knex } from 'knex';
 import { UserRepository } from './user';
 import { db } from '../lib/knexer';
 
-type IConstructable<T> = new (...args: any[]) => T;
+type IConstructable<T> = new (...args: unknown[]) => T;
 
 export interface IRepositories {
 	db: Knex;

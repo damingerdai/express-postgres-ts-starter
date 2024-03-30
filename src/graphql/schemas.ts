@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { mergeTypeDefs, mergeResolvers } from '@graphql-tools/merge';
+import { mergeTypeDefs } from '@graphql-tools/merge';
 import { typeDefs as accessTokens } from './access-tokens';
 import { typeDefs as ping } from './ping';
 import { typeDefs as user } from './user';

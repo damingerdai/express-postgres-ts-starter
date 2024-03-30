@@ -36,6 +36,7 @@ export const encrypt = (
 	return new Promise(q);
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const decrypt = (token: string): Promise<any> => {
 	const q = (resolve, reject) => {
 		jwt.verify(

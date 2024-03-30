@@ -36,4 +36,5 @@ redisClient.on('error', err => {
 	logger.error('Could not establish a connection with redis. ' + err);
 });
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const redisService = new RedisService(redisClient as any);

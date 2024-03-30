@@ -71,6 +71,7 @@ export class Knexer<T> {
 		return query;
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	protected raw(): Knex.QueryBuilder<any, any> {
 		return this.db(this.tableName);
 	}

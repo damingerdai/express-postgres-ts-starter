@@ -17,10 +17,7 @@ import express from 'express';
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
-import {
-	ApolloServerPluginLandingPageLocalDefault,
-	ApolloServerPluginLandingPageProductionDefault
-} from '@apollo/server/plugin/landingPage/default';
+import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
 import 'dotenv/config';
 import http from 'http';
 import { json } from 'body-parser';
@@ -80,7 +77,8 @@ async function startServer() {
 		});
 	});
 
-	await new Promise<void>(resolve => httpServer.listen({ port: serverConfig.port }, resolve)
+	await new Promise<void>(resolve =>
+		httpServer.listen({ port: serverConfig.port }, resolve)
 	);
 	logger.info(`🚀 The server has started on port ${serverConfig.port}`);
 }
