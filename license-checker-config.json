@@ -39,7 +39,7 @@
   "append": ""
  },
  "licenseFormats": {
-  "ts|js": {
+  "ts|js|cjs|mjs": {
    "eachLine": {
     "prepend": " * "
    },
