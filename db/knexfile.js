@@ -29,7 +29,7 @@ module.exports = {
 		database:
 			process.env.NODE_ENV === 'test'
 				? 'postgres_test'
-				: process.env.POSTGRES_DB_NAME || 'postgres'
+				: process.env.POSTGRES_DB || 'postgres'
 	},
 	migrations: {
 		tableName: '_migrations',

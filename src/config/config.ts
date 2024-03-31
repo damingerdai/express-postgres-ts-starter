@@ -45,9 +45,11 @@ export const config = {
 			min: parseInt(process.env.POSTGRES_POOL_MIN, 10) || 2
 		},
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-module-boundary-types,  no-unused-vars
-		postProcessResponse: (result, queryContext) => convertToCase(result, camelCase),
+		postProcessResponse: (result, queryContext) =>
+			convertToCase(result, camelCase),
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/explicit-module-boundary-types,  no-unused-vars
-		wrapIdentifier: (value, origImpl, queryContext) => origImpl(convertToCase(value, snakeCase))
+		wrapIdentifier: (value, origImpl, queryContext) =>
+			origImpl(convertToCase(value, snakeCase))
 	},
 	server: {
 		name: process.env.APP_LABEL ?? 'express-postgres-ts-starter',
@@ -57,7 +59,8 @@ export const config = {
 			mergeParams: false,
 			strict: false
 		},
-		isProduction: process.env.NODE_ENV?.toLowerCase() === 'production'
+		isProduction: process.env.NODE_ENV?.toLowerCase() === 'production',
+		nodeEnv: process.env.NODE_ENV?.toLowerCase() || 'development'
 	},
 	minio: {
 		endPoint: process.env.MINIO_ENDPOINT,
@@ -76,5 +79,9 @@ export const config = {
 		secret: process.env.JWT_SECRET,
 		algorithm: process.env.JWT_ALGORITHM,
 		ttl: process.env.JWT_TTL
+	},
+	session: {
+		secret: process.env.SESSION_SECRET || '$3cr3t$3ss!0n$3cr3t',
+		ttl: parseInt(process.env.SESSION_TTL || '7200', 10)
 	}
 };

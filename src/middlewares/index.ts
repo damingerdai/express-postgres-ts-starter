@@ -16,7 +16,6 @@
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import fileUpload from 'express-fileupload';
-import session from 'express-session';
 import * as helmet from 'helmet';
 
 import {
@@ -25,6 +24,7 @@ import {
 } from './body-parser';
 import { Compression } from './compression';
 import { Morgan } from './morgan';
+import { Session } from './session';
 
 export type NextHandleFunction = (
 	req?: express.Request,
@@ -45,5 +45,5 @@ export const middlewares = [
 	fileUpload(),
 	express.json({ limit: '50mb' }),
 	express.urlencoded({ extended: true, limit: '50mb' }),
-	session({ secret: '343ji43j4n3jn4jk3n' })
+	Session
 ] as NextHandleFunction[];

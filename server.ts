@@ -17,7 +17,6 @@ import express from 'express';
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
-import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
 import 'dotenv/config';
 import http from 'http';
 import { json } from 'body-parser';
@@ -44,10 +43,7 @@ async function startServer() {
 	const apolloServer = new ApolloServer<IContext>({
 		typeDefs,
 		resolvers,
-		plugins: [
-			ApolloServerPluginDrainHttpServer({ httpServer }),
-			ApolloServerPluginLandingPageLocalDefault({ footer: false })
-		]
+		plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
 	});
 
 	await apolloServer.start();
