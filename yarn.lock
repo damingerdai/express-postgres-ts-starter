@@ -3499,10 +3499,10 @@ express-fileupload@^1.4.0:
   dependencies:
     busboy "^1.6.0"
 
-express-joi-validation@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/express-joi-validation/-/express-joi-validation-0.3.0.tgz#6f7a8ca1cacd1175fbf08e3ba6a0a6b56c5e3482"
-  integrity sha512-lH8zcpX/BxHICHyJJyOhpvK3i9rkBr0b/D2i6sKeWxxQEUDt8nKS6nwKJcJA/Arcsbu1UzE0hJ8sa5XJtzWR6w==
+express-joi-validation@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/express-joi-validation/-/express-joi-validation-5.0.1.tgz#ded03f35ba5d95b57da6ebe22b2b6d2e4ab074c4"
+  integrity sha512-BztcU64addcAdxys2j42pZVSnJjEyFaLxNko7YSYDUuEBtKq2XnhzYZuy9ex9Q+Fdhef+NwLXhX1djwZmShCLg==
 
 express-session@^1.17.3:
   version "1.18.0"
