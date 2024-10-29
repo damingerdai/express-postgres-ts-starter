@@ -449,10 +449,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/bazelisk/-/bazelisk-1.19.0.tgz#de12b6920b2c5505a776fadc0c9e75daae930c32"
   integrity sha512-8PyRGRj/CN286IFHVILgYZ2lQ/JvgQ25ZEgoUAkpSnGmbPdQnKyHtTGEG+Sf0AISFqP5+PPzN162DcizZ/bR9w==
 
-"@bazel/buildifier@^6.0.0":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@bazel/buildifier/-/buildifier-6.4.0.tgz#5d5e56fa1ba74aa2e55e0e84bd17ead95e3f0c02"
-  integrity sha512-upvdCVlXYOatvank2Ch5lfNe9Msgny1Fozdz4fIm8diVju4Kd2JmA9DVS/Tg8UlFX/ItAL1PdSyefWK8Ashwdg==
+"@bazel/buildifier@^7.0.0":
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@bazel/buildifier/-/buildifier-7.3.1.tgz#ac988d719dd79589ec02db90c1b41ae5c88a0de6"
+  integrity sha512-qhSjryLo2uHeib/uLc8Yeh6SBisqdf9pPO79QPlyNO3Apc4g9J1Tir/52VdOo9czHTgSasbtOjfWJCPzMoCSIA==
 
 "@bazel/ibazel@^0.23.0":
   version "0.23.7"

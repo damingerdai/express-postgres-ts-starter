@@ -76,7 +76,7 @@
  },
  "devDependencies": {
   "@bazel/bazelisk": "^1.7.5",
-  "@bazel/buildifier": "^6.0.0",
+  "@bazel/buildifier": "^7.0.0",
   "@bazel/ibazel": "^0.23.0",
   "@bazel/typescript": "^5.8.1",
   "@commitlint/cli": "^17.6.5",
