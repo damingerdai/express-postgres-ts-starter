@@ -13,22 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { Workbook, Worksheet, WorksheetProtection } from 'exceljs';
+import { Workbook, Worksheet } from 'exceljs';
 import { Sheets } from './type';
 
 export async function protectSheets(sheets: Worksheet[]): Promise<void> {
 	const spinCount = Math.min(sheets.length, 10);
 	await Promise.all(
-		sheets.map(sheet => sheet.protect(Math.random().toString(), {
-			selectLockedCells: true,
-			selectUnlockedCells: true,
-			formatCells: false,
-			formatColumns: true,
-			formatRows: true,
-			insertRows: false,
-			insertColumns: false,
-			spinCount
-		} as unknown as WorksheetProtection)
+		sheets.map(sheet =>
+			sheet.protect(Math.random().toString(), {
+				selectLockedCells: true,
+				selectUnlockedCells: true,
+				formatCells: false,
+				formatColumns: true,
+				formatRows: true,
+				insertRows: false,
+				insertColumns: false,
+				spinCount
+			})
 		)
 	);
 }
