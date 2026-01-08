@@ -454,10 +454,10 @@
   resolved "https://registry.yarnpkg.com/@bazel/buildifier/-/buildifier-6.4.0.tgz#5d5e56fa1ba74aa2e55e0e84bd17ead95e3f0c02"
   integrity sha512-upvdCVlXYOatvank2Ch5lfNe9Msgny1Fozdz4fIm8diVju4Kd2JmA9DVS/Tg8UlFX/ItAL1PdSyefWK8Ashwdg==
 
-"@bazel/ibazel@^0.23.0":
-  version "0.23.7"
-  resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.23.7.tgz#c994c25a5036d2555794f94b8a8aad30a7bfbd18"
-  integrity sha512-yXoEXfRXrrnr+3xz0nrL9N90A+SVInZzvReQqCwWxbFhRuEWawf1Nm5NCpOw+STwzH/N1Rbc+7McXIGaAVRi8g==
+"@bazel/ibazel@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@bazel/ibazel/-/ibazel-0.28.0.tgz#d5313ed5ba386cfe9cda12585547d97577384c5b"
+  integrity sha512-8WV3Uulai7afTG0OLo7Kf72actI0N6WK4a89i0kClO0WVlY2DguKyBPR/Xs//Sn/U4c4V93b0HS1ufUv3aTxbA==
 
 "@bazel/typescript@^5.8.1":
   version "5.8.1"
