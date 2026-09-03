@@ -14,10 +14,10 @@ http_archive(
     # patches = [
     #     "//tools/esm-interop:patches/bazel/nodejs_binary_esm_support.patch",
     # ],
-    sha256 = "f36e4a4747210331767033dc30728ae3df0856e88ecfdc48a0077ba874db16c3",
+    sha256 = "21bef357a08cf71a18cce506748caf0b8aee454f3f4e237e12007911142fbcca",
     urls = [
-			"https://github.com/bazelbuild/rules_nodejs/releases/download/v6.0.3/rules_nodejs-v6.0.3.tar.gz",
-			"https://mirror.ghproxy.com/https://github.com/bazelbuild/rules_nodejs/releases/download/v6.0.3/rules_nodejs-v6.0.3.tar.gz"
+			"https://github.com/bazelbuild/rules_nodejs/releases/download/v6.7.6/rules_nodejs-v6.7.6.tar.gz",
+			"https://mirror.ghproxy.com/https://github.com/bazelbuild/rules_nodejs/releases/download/v6.7.6/rules_nodejs-v6.7.6.tar.gz"
 		],
 )
 
